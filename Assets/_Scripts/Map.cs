@@ -10,12 +10,8 @@ namespace _Scripts
         [SerializeField] public List<MapTile> _respawnTiles;
         [SerializeField] public List<MapTile> _tiles;
 
-        public List<MapTile> GetRespawnTiles() => _respawnTiles;
+        public IEnumerable<MapTile> GetMap() => _tiles;
         public MapTile GetStartTile() => _startTile;
-        
-        public List<MapTile> GetMap()
-        {
-            return _tiles;
-        }
+        public List<MapTile> GetRespawnTiles() => _respawnTiles;
     }
 }

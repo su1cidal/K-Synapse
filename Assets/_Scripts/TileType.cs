@@ -7,6 +7,7 @@ namespace _Scripts
         Key,
         Healing,
         Skull,
-        Question
+        Question,
+        Respawn
     }
 }
