@@ -14,7 +14,6 @@ namespace _Scripts
         [SerializeField] private ScriptableObject _gameSettings;
         
         [SerializeField] private List<Pawn> _players;
-
         
         private void Update()
         {
@@ -33,7 +32,7 @@ namespace _Scripts
                 MovePlayers();
             }
         }
-
+        
         private void MovePlayers()
         {          
             var mapTiles = _map.GetMap();

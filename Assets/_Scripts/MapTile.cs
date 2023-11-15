@@ -10,14 +10,13 @@ namespace _Scripts
 {
     public class MapTile : MonoBehaviour
     {
-        [SerializeField] private bool _isStart;
-        [SerializeField] private bool _isRespawn;
         [SerializeField] private TileType tileType;
         
         [SerializeField] public List<Pawn> pawnsOnTile;
         [SerializeField] public List<MapTile> adjacentTiles;
-
-
+        
+        
+        
         private void OnPawnFinalMove(Pawn pawn)
         {
             if (pawnsOnTile.Count < 2) return;
