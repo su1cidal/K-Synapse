@@ -2,110 +2,103 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using Task = System.Threading.Tasks.Task;
 
 namespace _Scripts
 {
     public class GameLoop : MonoBehaviour
     {
         [SerializeField] private Map _map;
-        [SerializeField] private ScriptableObject _gameSettings;
+        [SerializeField] private GameSettingsSO _gameSettings;
         
         [SerializeField] private List<Pawn> _players;
+        private GameState _gameState;
         
+        private void Start()
+        {
+            SwitchGameState(GameState.SpawnPlayers);
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
-                SpawnPlayer();
+                SwitchGameState(GameState.RollADice);
             }
+        }
+
+        private void SwitchGameState(GameState gameState)
+        {
+            _gameState = gameState;
             
-            if (Input.GetKeyDown(KeyCode.Space))
+            switch (_gameState)
             {
-                PlayersRollADice();
-            }
-            
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                MovePlayers();
+                case GameState.SpawnPlayers:
+                    Debug.Log("Entered state SpawnPlayers");
+                    SpawnPlayer();
+                    break;
+                case GameState.RollADice:
+                    Debug.Log("Entered state RollADice");
+                    PlayersRollADice();
+                    break;
+                case GameState.DoMoves:
+                    Debug.Log("Entered state DoMoves");
+                    MovePlayers();
+                    break;
+                case GameState.EndAction:
+                    Debug.Log("End Action: Show Question Window");
+                    //todo Show question interaction window
+                    
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
         
-        private void MovePlayers()
-        {          
-            var mapTiles = _map.GetMap();
-
-            foreach (Pawn player in _players)
-            {
-                for (int i = 0; i < player.rolledDice; i++)
-                {
-                    Debug.Log($"{player.gameObject.name} {i}" );
-                    var nextTile = player.currentMapTile.adjacentTiles;
-
-                    if (nextTile != null)
-                    { 
-                        player.isFinalStep = false;
-                        player.currentMapTile.RemovePawn(player);
-                        nextTile[0].AddPawn(player);
-                        player.currentMapTile = nextTile[0];
-                        player.GetComponentInChildren<Transform>().DOMove(player.currentMapTile.transform.position, 1f);//todo or *speed*Time.deltatime
-                        StartCoroutine(Wait());
-                        
-                        // if (nextTile.Count == 1)
-                        // {
-                        //     
-                        // }
-                        // else
-                        // {
-                        //     Debug.Log("Two ways!");
-                        //     if (Input.GetKeyDown(KeyCode.Alpha1))
-                        //     {
-                        //         player.currentMapTile.RemovePawn(player);
-                        //         nextTile[0].AddPawn(player);
-                        //     }
-                        //     if (Input.GetKeyDown(KeyCode.Alpha2))
-                        //     {
-                        //         player.currentMapTile.RemovePawn(player);
-                        //         nextTile[1].AddPawn(player);
-                        //     }
-                        // }
-                    }
-
-                }
-
-                player.isFinalStep = true;
-                Debug.Log(player.currentMapTile.GetTileType()); 
-            }
-        }
         private void SpawnPlayer()
         {
             var startTile = _map.GetStartTile();
-
             foreach (var player in _players)
             {
                 startTile.AddPawn(player);
                 player.currentMapTile = startTile;
+                player.GetComponentInChildren<Transform>().position = player.currentMapTile.transform.position;
             }
-        }
 
+            Debug.Log("All players were spawned!");
+            SwitchGameState(GameState.RollADice);
+        }
+        
         private void PlayersRollADice()
         {
             if (_players.Count >= 1)
             {
                 foreach (var player in _players)
-                {
-                    if (player != null)
-                        player.RollADice();
+                { 
+                    player.RollADice();
                 }
             }
+            Debug.Log("All players rolled a dice!");
+            SwitchGameState(GameState.DoMoves);
         }
-        
-        
-        IEnumerator Wait()
+
+        private void MovePlayers()
         {
-            yield return new WaitForSeconds(1);
+            foreach (var player in _players)
+            {
+                if (player != null)
+                {
+                    StartCoroutine(player.MoveToNextTile());
+                }
+            }
+                            
+            Debug.Log("All players were moved!");
+            SwitchGameState(GameState.EndAction);
         }
     }
 }

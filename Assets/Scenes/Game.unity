@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 908331315}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 5
+  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 484806626}
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1046129258}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 5
+  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 2074176070}
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 660982999}
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 72353846}
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1839716537}
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 7
+  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 386448608}
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1487111773}
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 7
+  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1547046128}
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 2
+  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1547046128}
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 5
+  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1873974095}
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 4
+  _tileType: 4
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 605125294}
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1804444125}
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1210861098}
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1504099433}
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 2
+  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1753774054}
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 7
+  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1753774054}
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 3
+  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 128184780}
@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 217678007}
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 2
+  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 386448608}
@@ -2740,7 +2740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 1
+  _tileType: 1
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 765137300}
@@ -2826,7 +2826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 5
+  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1314466976}
@@ -2912,7 +2912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 4
+  _tileType: 4
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1834648404}
@@ -3003,7 +3003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 6
+  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1200666206}
@@ -3153,7 +3153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 5
+  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
   - {fileID: 1809808516}
