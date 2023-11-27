@@ -181,7 +181,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 72353846}
+      addedObject: {fileID: 72353850}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &72353844 stripped
 Transform:
@@ -193,7 +193,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 72353843}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &72353846
+--- !u!114 &72353850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,13 +202,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 72353845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 908331315}
+  - {fileID: 908331319}
 --- !u!1001 &128184777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,7 +266,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 128184780}
+      addedObject: {fileID: 128184784}
   m_SourcePrefab: {fileID: 100100000, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
 --- !u!4 &128184778 stripped
 Transform:
@@ -279,7 +278,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
   m_PrefabInstance: {fileID: 128184777}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &128184780
+--- !u!114 &128184784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,13 +287,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 128184779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f36c0134924a02be878e27800559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 484806626}
+  - {fileID: 484806630}
 --- !u!1001 &217678004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,7 +351,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 217678007}
+      addedObject: {fileID: 217678011}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &217678005 stripped
 Transform:
@@ -365,7 +363,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 217678004}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &217678007
+--- !u!114 &217678011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,13 +372,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 217678006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1046129258}
+  - {fileID: 1046129262}
 --- !u!1 &353889976
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +528,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 386448608}
+      addedObject: {fileID: 386448612}
   m_SourcePrefab: {fileID: 100100000, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
 --- !u!4 &386448606 stripped
 Transform:
@@ -543,7 +540,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
   m_PrefabInstance: {fileID: 386448605}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &386448608
+--- !u!114 &386448612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -552,13 +549,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 386448607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f36c0134924a02be878e27800559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 2074176070}
+  - {fileID: 2074176074}
 --- !u!1001 &394776188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -713,10 +709,11 @@ MonoBehaviour:
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
   color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 436038092}
+  isFinalStep: 1
+  tileEventEnded: 1
 --- !u!1 &451481452
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +866,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 484806626}
+      addedObject: {fileID: 484806630}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &484806624 stripped
 Transform:
@@ -881,7 +878,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 484806623}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &484806626
+--- !u!114 &484806630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,13 +887,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 484806625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 660982999}
+  - {fileID: 660983003}
 --- !u!1001 &605125291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -955,7 +951,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 605125294}
+      addedObject: {fileID: 605125298}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &605125292 stripped
 Transform:
@@ -967,7 +963,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 605125291}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &605125294
+--- !u!114 &605125298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -976,13 +972,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 605125293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 72353846}
+  - {fileID: 72353850}
 --- !u!1001 &660982996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1041,7 +1036,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 660982999}
+      addedObject: {fileID: 660983003}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &660982997 stripped
 Transform:
@@ -1053,7 +1048,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 660982996}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &660982999
+--- !u!114 &660983003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1062,13 +1057,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 660982998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1839716537}
+  - {fileID: 1839716541}
 --- !u!1001 &696156490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1127,7 +1121,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 696156493}
+      addedObject: {fileID: 696156497}
   m_SourcePrefab: {fileID: 100100000, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
 --- !u!4 &696156491 stripped
 Transform:
@@ -1139,7 +1133,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
   m_PrefabInstance: {fileID: 696156490}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &696156493
+--- !u!114 &696156497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1148,13 +1142,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 696156492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4865693c7bcd4d1bae1b0b4dd8e3e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 386448608}
+  - {fileID: 386448612}
 --- !u!1001 &765137297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1213,7 +1206,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 765137300}
+      addedObject: {fileID: 765137304}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &765137298 stripped
 Transform:
@@ -1225,7 +1218,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 765137297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &765137300
+--- !u!114 &765137304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1234,13 +1227,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 765137299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1487111773}
+  - {fileID: 1487111777}
 --- !u!1001 &849063644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,7 +1291,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 849063647}
+      addedObject: {fileID: 849063651}
   m_SourcePrefab: {fileID: 100100000, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
 --- !u!4 &849063645 stripped
 Transform:
@@ -1311,7 +1303,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
   m_PrefabInstance: {fileID: 849063644}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &849063647
+--- !u!114 &849063651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1320,13 +1312,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 849063646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4865693c7bcd4d1bae1b0b4dd8e3e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1547046128}
+  - {fileID: 1547046132}
 --- !u!1 &907425109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -1390,7 +1381,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 908331315}
+      addedObject: {fileID: 908331319}
   m_SourcePrefab: {fileID: 100100000, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
 --- !u!4 &908331313 stripped
 Transform:
@@ -1402,7 +1393,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
   m_PrefabInstance: {fileID: 908331312}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &908331315
+--- !u!114 &908331319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1411,13 +1402,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 908331314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1005ebe9fa490090c7dd65342f2abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1547046128}
+  - {fileID: 1547046132}
 --- !u!1001 &997071181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1503,10 +1493,11 @@ MonoBehaviour:
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
   color: {fileID: 2100000, guid: 8a35ca428e2ab2b4184afa310f03cef3, type: 2}
   visual: {fileID: 907425109}
+  isFinalStep: 1
+  tileEventEnded: 1
 --- !u!1001 &1046129255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1565,7 +1556,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1046129258}
+      addedObject: {fileID: 1046129262}
   m_SourcePrefab: {fileID: 100100000, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
 --- !u!4 &1046129256 stripped
 Transform:
@@ -1577,7 +1568,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
   m_PrefabInstance: {fileID: 1046129255}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1046129258
+--- !u!114 &1046129262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1586,13 +1577,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1046129257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f36c0134924a02be878e27800559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1873974095}
+  - {fileID: 1873974099}
 --- !u!1 &1073412881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -1614,10 +1604,11 @@ MonoBehaviour:
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
   color: {fileID: 2100000, guid: 12ed10abf12092342a0e5402d4dcc526, type: 2}
   visual: {fileID: 1866248583}
+  isFinalStep: 1
+  tileEventEnded: 1
 --- !u!1 &1084011956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1750,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: a5693602589b9a04c8741337163d4f66, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1200666206}
+      addedObject: {fileID: 1200666210}
   m_SourcePrefab: {fileID: 100100000, guid: a5693602589b9a04c8741337163d4f66, type: 3}
 --- !u!4 &1200666204 stripped
 Transform:
@@ -1771,7 +1762,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: a5693602589b9a04c8741337163d4f66, type: 3}
   m_PrefabInstance: {fileID: 1200666203}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1200666206
+--- !u!114 &1200666210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1780,13 +1771,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200666205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d1d1361ae25405888a65fbba9b486cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 4
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 605125294}
+  - {fileID: 605125298}
 --- !u!1001 &1210861095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1845,7 +1835,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1210861098}
+      addedObject: {fileID: 1210861102}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &1210861096 stripped
 Transform:
@@ -1857,7 +1847,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 1210861095}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1210861098
+--- !u!114 &1210861102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1866,13 +1856,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210861097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1804444125}
+  - {fileID: 1804444129}
 --- !u!1 &1262093788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,13 +1906,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2331386c80fc4404c848102da293d277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _map: {fileID: 1761302562}
   _gameSettings: {fileID: 11400000, guid: 85eb9174ce56c144d8b50ac58492d8d4, type: 2}
   _players:
   - {fileID: 436038093}
   - {fileID: 1017912271}
-  - {fileID: 1352765068}
-  - {fileID: 1073412882}
+  _map: {fileID: 1761302562}
 --- !u!1001 &1314466973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1982,7 +1969,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1314466976}
+      addedObject: {fileID: 1314466980}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &1314466974 stripped
 Transform:
@@ -1994,7 +1981,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 1314466973}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1314466976
+--- !u!114 &1314466980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2003,13 +1990,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1314466975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1210861098}
+  - {fileID: 1210861102}
 --- !u!1 &1352765067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -2031,10 +2017,11 @@ MonoBehaviour:
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
   color: {fileID: 2100000, guid: 39339bb59692bc547ab5d7408927f3fd, type: 2}
   visual: {fileID: 1424379952}
+  isFinalStep: 1
+  tileEventEnded: 1
 --- !u!1 &1424379952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -2098,7 +2085,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1487111773}
+      addedObject: {fileID: 1487111777}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &1487111771 stripped
 Transform:
@@ -2110,7 +2097,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 1487111770}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1487111773
+--- !u!114 &1487111777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2119,13 +2106,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487111772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1504099433}
+  - {fileID: 1504099437}
 --- !u!1001 &1504099430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2184,7 +2170,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1504099433}
+      addedObject: {fileID: 1504099437}
   m_SourcePrefab: {fileID: 100100000, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
 --- !u!4 &1504099431 stripped
 Transform:
@@ -2196,7 +2182,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
   m_PrefabInstance: {fileID: 1504099430}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1504099433
+--- !u!114 &1504099437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2205,13 +2191,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504099432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1005ebe9fa490090c7dd65342f2abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1753774054}
+  - {fileID: 1753774058}
 --- !u!1001 &1519192259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2270,7 +2255,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1519192262}
+      addedObject: {fileID: 1519192266}
   m_SourcePrefab: {fileID: 100100000, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
 --- !u!4 &1519192260 stripped
 Transform:
@@ -2282,7 +2267,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: d6adb06dd7c43714b8bc6db2ffdf3c37, type: 3}
   m_PrefabInstance: {fileID: 1519192259}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1519192262
+--- !u!114 &1519192266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2291,13 +2276,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1519192261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4865693c7bcd4d1bae1b0b4dd8e3e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 7
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1753774054}
+  - {fileID: 1753774058}
 --- !u!1001 &1547046125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2356,7 +2340,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1547046128}
+      addedObject: {fileID: 1547046132}
   m_SourcePrefab: {fileID: 100100000, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
 --- !u!4 &1547046126 stripped
 Transform:
@@ -2368,7 +2352,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 79b722609bae2324592f74e0197be5a2, type: 3}
   m_PrefabInstance: {fileID: 1547046125}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1547046128
+--- !u!114 &1547046132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2377,13 +2361,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547046127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 27777906e1ad4df8b28b6002e0a50438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 3
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 128184780}
+  - {fileID: 128184784}
 --- !u!1001 &1753774051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2442,7 +2425,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1753774054}
+      addedObject: {fileID: 1753774058}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &1753774052 stripped
 Transform:
@@ -2454,7 +2437,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 1753774051}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1753774054
+--- !u!114 &1753774058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2463,13 +2446,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1753774053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 217678007}
+  - {fileID: 217678011}
 --- !u!1 &1761302560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,38 +2522,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a478a38d195474742bf244f057437706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startTile: {fileID: 1809808516}
-  _respawnTiles:
-  - {fileID: 1519192262}
-  - {fileID: 849063647}
-  - {fileID: 696156493}
+  _startTile: {fileID: 1809808520}
+  _respawnTiles: []
   _tiles:
-  - {fileID: 1200666206}
-  - {fileID: 1839716537}
-  - {fileID: 765137300}
-  - {fileID: 605125294}
-  - {fileID: 1210861098}
-  - {fileID: 217678007}
-  - {fileID: 660982999}
-  - {fileID: 1547046128}
-  - {fileID: 1487111773}
-  - {fileID: 1753774054}
-  - {fileID: 1873974095}
-  - {fileID: 72353846}
-  - {fileID: 484806626}
-  - {fileID: 1314466976}
-  - {fileID: 1046129258}
-  - {fileID: 128184780}
-  - {fileID: 386448608}
-  - {fileID: 2074176070}
-  - {fileID: 1834648404}
-  - {fileID: 1809808516}
-  - {fileID: 1504099433}
-  - {fileID: 908331315}
-  - {fileID: 1804444125}
-  - {fileID: 1519192262}
-  - {fileID: 849063647}
-  - {fileID: 696156493}
+  - {fileID: 1200666210}
+  - {fileID: 1839716541}
+  - {fileID: 765137304}
+  - {fileID: 605125298}
+  - {fileID: 1210861102}
+  - {fileID: 217678011}
+  - {fileID: 660983003}
+  - {fileID: 1547046132}
+  - {fileID: 1487111777}
+  - {fileID: 1753774058}
+  - {fileID: 1873974099}
+  - {fileID: 72353850}
+  - {fileID: 484806630}
+  - {fileID: 1314466980}
+  - {fileID: 1046129262}
+  - {fileID: 128184784}
+  - {fileID: 386448612}
+  - {fileID: 2074176074}
+  - {fileID: 1834648408}
+  - {fileID: 1809808520}
+  - {fileID: 1504099437}
+  - {fileID: 908331319}
+  - {fileID: 1804444129}
+  - {fileID: 1519192266}
+  - {fileID: 849063651}
+  - {fileID: 696156497}
 --- !u!1001 &1804444122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2630,7 +2609,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1804444125}
+      addedObject: {fileID: 1804444129}
   m_SourcePrefab: {fileID: 100100000, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
 --- !u!4 &1804444123 stripped
 Transform:
@@ -2642,7 +2621,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 84b13391ba6d61044aff2be9c94f2f20, type: 3}
   m_PrefabInstance: {fileID: 1804444122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1804444125
+--- !u!114 &1804444129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2651,13 +2630,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804444124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1005ebe9fa490090c7dd65342f2abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 2
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 386448608}
+  - {fileID: 386448612}
 --- !u!1001 &1809808513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2716,7 +2694,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 6978ce0c40e42fc4592b8145bee2ce9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1809808516}
+      addedObject: {fileID: 1809808520}
   m_SourcePrefab: {fileID: 100100000, guid: 6978ce0c40e42fc4592b8145bee2ce9e, type: 3}
 --- !u!4 &1809808514 stripped
 Transform:
@@ -2728,7 +2706,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 6978ce0c40e42fc4592b8145bee2ce9e, type: 3}
   m_PrefabInstance: {fileID: 1809808513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1809808516
+--- !u!114 &1809808520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2737,13 +2715,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1809808515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 36560bbdc0544e1fa9f3b12433bd152b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 1
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 765137300}
+  - {fileID: 765137304}
 --- !u!1001 &1834648401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2802,7 +2779,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1834648404}
+      addedObject: {fileID: 1834648408}
   m_SourcePrefab: {fileID: 100100000, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
 --- !u!4 &1834648402 stripped
 Transform:
@@ -2814,7 +2791,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
   m_PrefabInstance: {fileID: 1834648401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1834648404
+--- !u!114 &1834648408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2823,13 +2800,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834648403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f36c0134924a02be878e27800559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1314466976}
+  - {fileID: 1314466980}
 --- !u!1001 &1839716534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2888,7 +2864,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: a5693602589b9a04c8741337163d4f66, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1839716537}
+      addedObject: {fileID: 1839716541}
   m_SourcePrefab: {fileID: 100100000, guid: a5693602589b9a04c8741337163d4f66, type: 3}
 --- !u!4 &1839716535 stripped
 Transform:
@@ -2900,7 +2876,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: a5693602589b9a04c8741337163d4f66, type: 3}
   m_PrefabInstance: {fileID: 1839716534}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1839716537
+--- !u!114 &1839716541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2909,13 +2885,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839716536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d1d1361ae25405888a65fbba9b486cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 4
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1834648404}
+  - {fileID: 1834648408}
 --- !u!1 &1866248583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -2979,7 +2954,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1873974095}
+      addedObject: {fileID: 1873974099}
   m_SourcePrefab: {fileID: 100100000, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
 --- !u!4 &1873974093 stripped
 Transform:
@@ -2991,7 +2966,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: 28d1bb3c7fabd564bb68cec0a252d3d6, type: 3}
   m_PrefabInstance: {fileID: 1873974092}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1873974095
+--- !u!114 &1873974099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3000,13 +2975,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873974094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: b524f7bcad564b45b6ee9d1fdc4dddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 6
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1200666206}
+  - {fileID: 1200666210}
 --- !u!1001 &1875204924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3129,7 +3103,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2074176070}
+      addedObject: {fileID: 2074176074}
   m_SourcePrefab: {fileID: 100100000, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
 --- !u!4 &2074176068 stripped
 Transform:
@@ -3141,7 +3115,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3823490778352356851, guid: c3e99264cf25d784cb402c2d6afcdb28, type: 3}
   m_PrefabInstance: {fileID: 2074176067}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2074176070
+--- !u!114 &2074176074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3150,13 +3124,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074176069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820d46eb710f65745a6a7f8dd833c26c, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f36c0134924a02be878e27800559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileType: 5
   pawnsOnTile: []
   adjacentTiles:
-  - {fileID: 1809808516}
+  - {fileID: 1809808520}
 --- !u!1 &2115827396
 GameObject:
   m_ObjectHideFlags: 0

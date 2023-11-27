@@ -7,21 +7,34 @@ using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using Task = System.Threading.Tasks.Task;
+using System.Threading;
 
 namespace _Scripts
 {
     public class GameLoop : MonoBehaviour
     {
-        [SerializeField] private Map _map;
         [SerializeField] private GameSettingsSO _gameSettings;
-        
         [SerializeField] private List<Pawn> _players;
-        private GameState _gameState;
+        [SerializeField] private Map _map;
         
+        private GameState _gameState;
+        private int _playerCount;
+
+        private void Awake()
+        {
+            // todo ReadGameSettings()
+        }
+
         private void Start()
         {
             SwitchGameState(GameState.SpawnPlayers);
+            
+            // todo create players from prefabs
+            
+            foreach (var player in _players)
+            {
+                player.OnFinalStep += PlayerOnOnFinalStep;
+            }
         }
 
         private void Update()
@@ -32,8 +45,15 @@ namespace _Scripts
             }
         }
 
+        private void PlayerOnOnFinalStep(object sender, EventArgs e)
+        {
+            _playerCount--;
+        }
+        
         private void SwitchGameState(GameState gameState)
         {
+            _playerCount = _players.Count;
+            
             _gameState = gameState;
             
             switch (_gameState)
@@ -84,21 +104,42 @@ namespace _Scripts
                 }
             }
             Debug.Log("All players rolled a dice!");
+
+            // while (!IsPlayerCountZeroed()) // https://discussions.unity.com/t/have-a-function-to-wait-until-true/49616
+            // {
+            //     //await Task.Delay(25);
+            // }
             SwitchGameState(GameState.DoMoves);
+        }
+
+        private bool IsPlayerCountZeroed()
+        {
+            if (_playerCount == 0)
+                return true;
+            else
+            {
+                return false;
+            }
         }
 
         private void MovePlayers()
         {
             foreach (var player in _players)
             {
-                if (player != null)
-                {
-                    StartCoroutine(player.MoveToNextTile());
-                }
+                StartCoroutine(player.MoveByPath());
+                
+                Debug.Log("All players were moved!");
             }
-                            
-            Debug.Log("All players were moved!");
+
             SwitchGameState(GameState.EndAction);
+        }
+
+        private void OnDestroy()
+        {
+            foreach (var player in _players)
+            {
+                player.OnFinalStep -= PlayerOnOnFinalStep;
+            }
         }
     }
 }

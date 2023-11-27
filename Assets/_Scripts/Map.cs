@@ -6,12 +6,12 @@ namespace _Scripts
 {
     public class Map : MonoBehaviour
     {
-        [SerializeField] public MapTile _startTile;
-        [SerializeField] public List<MapTile> _respawnTiles;
-        [SerializeField] public List<MapTile> _tiles;
+        [SerializeField] public Tile _startTile;
+        [SerializeField] public List<Tile> _respawnTiles;
+        [SerializeField] public List<Tile> _tiles;
 
-        public IEnumerable<MapTile> GetMap() => _tiles;
-        public MapTile GetStartTile() => _startTile;
-        public List<MapTile> GetRespawnTiles() => _respawnTiles;
+        public IEnumerable<Tile> GetMap() => _tiles;
+        public Tile GetStartTile() => _startTile;
+        public List<Tile> GetRespawnTiles() => _respawnTiles;
     }
 }
