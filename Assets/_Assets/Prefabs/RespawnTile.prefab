@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3184201639061507557}
   - component: {fileID: 7415795208139781226}
   - component: {fileID: 3196366954448921540}
+  - component: {fileID: 8760190317105310412}
   m_Layer: 0
   m_Name: RespawnTile
   m_TagString: Untagged
@@ -108,6 +109,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8760190317105310412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823490778352356851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4865693c7bcd4d1bae1b0b4dd8e3e0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawnsOnTile: []
+  adjacentTiles: []
 --- !u!1 &7532118308104386645
 GameObject:
   m_ObjectHideFlags: 0
