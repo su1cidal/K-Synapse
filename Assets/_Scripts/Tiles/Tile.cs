@@ -2,15 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
-namespace _Scripts
+namespace _Scripts.Tiles
 {
     public abstract class Tile : MonoBehaviour
     {
         [SerializeField] public List<Pawn> pawnsOnTile;
         [SerializeField] public List<Tile> adjacentTiles;
         
-        public abstract void DoAction(Pawn player);
-
+        public abstract bool DoAction(Pawn player);
+        
+        //public delegate void OnCompleteCallback(string result);
+        //public event OnCompleteCallback OnComplete;
+        
         public void AddPawn(Pawn pawn)
         {
             if (!pawnsOnTile.Contains(pawn))

@@ -1,14 +1,18 @@
 using UnityEngine;
 
-namespace _Scripts
+namespace _Scripts.Tiles
 {
     public class KeyTile : Tile
     {
-        public override void DoAction(Pawn player)
+        public override bool DoAction(Pawn player)
         {
             Debug.Log("KeyTile Action");
             
             player.AddKeys(Constants.KEYS_TO_ADD_AT_KEYS_TILE);
+            
+            
+            
+            return true;
         }
     }
 }

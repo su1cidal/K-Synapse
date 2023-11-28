@@ -1,12 +1,14 @@
 using UnityEngine;
 
-namespace _Scripts
+namespace _Scripts.Tiles
 {
     public class StartTile : Tile
     {
-        public override void DoAction(Pawn player)
+        public override bool DoAction(Pawn player)
         {
             Debug.Log("StartTile Action!");
+            
+            return true;
         }
     }
 }

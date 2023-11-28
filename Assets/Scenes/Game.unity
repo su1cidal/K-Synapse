@@ -463,13 +463,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353889976}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.8431569, z: -0.5376676, w: 0}
-  m_LocalPosition: {x: -1, y: 11.47, z: 7.1}
+  m_LocalRotation: {x: 0, y: 0.83388585, z: -0.5519369, w: 0}
+  m_LocalPosition: {x: -1, y: 11, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 65.05, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 67, y: 180, z: 0}
 --- !u!1001 &386448605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,7 +565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_Name
-      value: Pawn (3)
+      value: Pawn#4
       objectReference: {fileID: 0}
     - target: {fileID: 3745166152564900545, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -629,7 +629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_Name
-      value: Pawn
+      value: Pawn#1
       objectReference: {fileID: 0}
     - target: {fileID: 3745166152564900545, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,15 +705,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 30
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  currentMapTile: {fileID: 0}
+  currentMapTile: {fileID: 1809808520}
   color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 436038092}
-  isFinalStep: 1
-  tileEventEnded: 1
 --- !u!1 &451481452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,7 +1416,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_Name
-      value: Pawn (2)
+      value: Pawn#3
       objectReference: {fileID: 0}
     - target: {fileID: 3745166152564900545, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1489,15 +1487,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 30
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  currentMapTile: {fileID: 0}
+  currentMapTile: {fileID: 1809808520}
   color: {fileID: 2100000, guid: 8a35ca428e2ab2b4184afa310f03cef3, type: 2}
   visual: {fileID: 907425109}
-  isFinalStep: 1
-  tileEventEnded: 1
 --- !u!1001 &1046129255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1600,15 +1596,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 30
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  currentMapTile: {fileID: 0}
+  currentMapTile: {fileID: 1809808520}
   color: {fileID: 2100000, guid: 12ed10abf12092342a0e5402d4dcc526, type: 2}
   visual: {fileID: 1866248583}
-  isFinalStep: 1
-  tileEventEnded: 1
 --- !u!1 &1084011956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b43076dbba8d6645b5da1e3b024606c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1687,7 +1681,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
+  m_LocalScale: {x: 29.873455, y: 1, z: 23.598202}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1907,10 +1901,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameSettings: {fileID: 11400000, guid: 85eb9174ce56c144d8b50ac58492d8d4, type: 2}
-  _players:
+  _pawnMover: {fileID: 1869306100}
+  _pawns:
   - {fileID: 436038093}
   - {fileID: 1017912271}
+  - {fileID: 1352765068}
+  - {fileID: 1073412882}
   _map: {fileID: 1761302562}
+  isFinished: 1
 --- !u!1001 &1314466973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2013,15 +2011,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 30
   keys: 0
   answeredQuestions: 0
   rolledDice: 0
-  currentMapTile: {fileID: 0}
+  currentMapTile: {fileID: 1809808520}
   color: {fileID: 2100000, guid: 39339bb59692bc547ab5d7408927f3fd, type: 2}
   visual: {fileID: 1424379952}
-  isFinalStep: 1
-  tileEventEnded: 1
 --- !u!1 &1424379952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
@@ -2523,7 +2519,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startTile: {fileID: 1809808520}
-  _respawnTiles: []
+  _respawnTiles:
+  - {fileID: 1519192266}
+  - {fileID: 849063651}
+  - {fileID: 696156497}
   _tiles:
   - {fileID: 1200666210}
   - {fileID: 1839716541}
@@ -2896,6 +2895,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
   m_PrefabInstance: {fileID: 394776188}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1869306099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869306101}
+  - component: {fileID: 1869306100}
+  m_Layer: 0
+  m_Name: PawnMover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1869306100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869306099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24023476f544cbeabc9dd48e6675a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1869306101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869306099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1873974092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2991,7 +3034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621463475400945903, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_Name
-      value: Pawn (1)
+      value: Pawn#2
       objectReference: {fileID: 0}
     - target: {fileID: 3745166152564900545, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3227,3 +3270,4 @@ SceneRoots:
   - {fileID: 1875204924}
   - {fileID: 997071181}
   - {fileID: 394776188}
+  - {fileID: 1869306101}

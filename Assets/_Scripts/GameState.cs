@@ -4,7 +4,8 @@ namespace _Scripts
     {
         SpawnPlayers,
         RollADice,
+        SortMoveOrder,
         DoMoves,
-        EndAction,
+        CycleAction,
     }
 }

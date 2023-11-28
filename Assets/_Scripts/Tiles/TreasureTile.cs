@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace _Scripts
+namespace _Scripts.Tiles
 {
     public class TreasureTile : Tile
     {
-        public override void DoAction(Pawn player)
+        public override bool DoAction(Pawn player)
         {
             Debug.Log("TreasureTile Action");
             if (player.keys >= Constants.KEYS_TO_OPEN_TREASURE)
@@ -15,6 +15,8 @@ namespace _Scripts
             {
                 //todo Show NoKeys emote above player
             }
+            
+            return true;
         }
     }
 }
