@@ -1,11 +1,8 @@
-namespace _Scripts
+public enum GameState
 {
-    public enum GameState
-    {
-        SpawnPlayers,
-        RollADice,
-        SortMoveOrder,
-        DoMoves,
-        CycleAction,
-    }
+    SpawnPlayers,
+    RollADice,
+    SortMoveOrder,
+    DoMoves,
+    CycleAction,
 }

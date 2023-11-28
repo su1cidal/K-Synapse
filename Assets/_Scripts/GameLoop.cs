@@ -5,135 +5,133 @@ using System.Text;
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace _Scripts
+public class GameLoop : MonoBehaviour
 {
-    public class GameLoop : MonoBehaviour
+    public static GameLoop Instance { get; private set; }
+
+    [SerializeField] private GameSettingsSO _gameSettings;
+    [SerializeField] private PawnMover _pawnMover;
+    [SerializeField] private List<Pawn> _pawns;
+    [SerializeField] private Map _map;
+
+    public bool isFinished = true;
+
+    private GameState _gameState;
+
+    private void Awake()
     {
-        public static GameLoop Instance { get; private set; }
-        
-        [SerializeField] private GameSettingsSO _gameSettings;
-        [SerializeField] private PawnMover _pawnMover;
-        [SerializeField] private List<Pawn> _pawns;
-        [SerializeField] private Map _map;
-
-        public bool isFinished = true;
-        
-        private GameState _gameState;
-        
-        private void Awake()
+        if (Instance != null && Instance != this)
         {
-            if (Instance != null && Instance != this) 
-            { 
-                Destroy(this); 
-            } 
-            else 
-            { 
-                Instance = this; 
-            } 
-            // todo ReadGameSettings()
+            Destroy(this);
         }
-
-        private void Start()
+        else
         {
-          
-            SwitchGameState(GameState.SpawnPlayers);
-            
-            // todo create players from prefabs
+            Instance = this;
         }
+        // todo ReadGameSettings()
+    }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                SwitchGameState(GameState.RollADice);
-            }
-        }
-        
-        private void SpawnPawns()
-        {
-            var startTile = _map.GetStartTile();
-            foreach (var pawn in _pawns)
-            {
-                startTile.AddPawn(pawn);
-                pawn.currentMapTile = startTile;
-                pawn.GetComponentInChildren<Transform>().position = pawn.currentMapTile.transform.position;
-            }
+    private void Start()
+    {
 
-            Debug.Log("All players were spawned!");
+        SwitchGameState(GameState.SpawnPlayers);
+
+        // todo create players from prefabs
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
             SwitchGameState(GameState.RollADice);
         }
-        
-        private void RollADice()
+    }
+
+    private void SpawnPawns()
+    {
+        var startTile = _map.GetStartTile();
+        foreach (var pawn in _pawns)
         {
-            if (_pawns.Count >= 1)
-            {
-                foreach (var pawn in _pawns)
-                { 
-                    pawn.RollADice();
-                }
-            }
-            Debug.Log("All players rolled a dice!");
-            
-            SwitchGameState(GameState.SortMoveOrder);
+            startTile.AddPawn(pawn);
+            pawn.currentMapTile = startTile;
+            pawn.GetComponentInChildren<Transform>().position = pawn.currentMapTile.transform.position;
         }
 
-        private IEnumerator MovePawns()
+        Debug.Log("All players were spawned!");
+        SwitchGameState(GameState.RollADice);
+    }
+
+    private void RollADice()
+    {
+        if (_pawns.Count >= 1)
         {
             foreach (var pawn in _pawns)
             {
-                yield return StartCoroutine(_pawnMover.MoveByPath(pawn));
-            }
-            
-            Debug.Log("All players were moved!");
-            //SwitchGameState(GameState.EndAction);
-        }
-        
-        private void SwitchGameState(GameState gameState)
-        {
-            _gameState = gameState;
-            
-            switch (_gameState)
-            {
-                case GameState.SpawnPlayers:
-                    Debug.Log("Entered state SpawnPlayers");
-                    SpawnPawns();
-                    break;
-                case GameState.RollADice:
-                    Debug.Log("Entered state RollADice");
-                    RollADice();
-                    break;
-                case GameState.SortMoveOrder:
-                    Debug.Log("Entered state SortMoveOrder");
-                    SortMoveOrder();
-                    break;
-                case GameState.DoMoves:
-                    Debug.Log("Entered state DoMoves");
-                    StartCoroutine(MovePawns());
-                    break;
-                case GameState.CycleAction:
-                    Debug.Log("Entered state CycleAction");
-                    //todo Show question interaction window
-                    
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                pawn.RollADice();
             }
         }
 
-        private void SortMoveOrder()
+        Debug.Log("All players rolled a dice!");
+
+        SwitchGameState(GameState.SortMoveOrder);
+    }
+
+    private IEnumerator MovePawns()
+    {
+        foreach (var pawn in _pawns)
         {
-            StringBuilder sortedPawns = new StringBuilder();
-            
-            _pawns = _pawns.OrderByDescending(o => o.rolledDice).ToList();
-            
-            foreach (var pawn in _pawns)
-            {
-                sortedPawns.Append($"{pawn.name}({pawn.rolledDice})|");
-            }
-            
-            Debug.Log($"Sorted order: {sortedPawns}");
-            
-            SwitchGameState(GameState.DoMoves);
+            yield return StartCoroutine(_pawnMover.MoveByPath(pawn));
         }
+
+        Debug.Log("All players were moved!");
+        //SwitchGameState(GameState.EndAction);
+    }
+
+    private void SwitchGameState(GameState gameState)
+    {
+        _gameState = gameState;
+
+        switch (_gameState)
+        {
+            case GameState.SpawnPlayers:
+                Debug.Log("Entered state SpawnPlayers");
+                SpawnPawns();
+                break;
+            case GameState.RollADice:
+                Debug.Log("Entered state RollADice");
+                RollADice();
+                break;
+            case GameState.SortMoveOrder:
+                Debug.Log("Entered state SortMoveOrder");
+                SortMoveOrder();
+                break;
+            case GameState.DoMoves:
+                Debug.Log("Entered state DoMoves");
+                StartCoroutine(MovePawns());
+                break;
+            case GameState.CycleAction:
+                Debug.Log("Entered state CycleAction");
+                //todo Show question interaction window
+
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    private void SortMoveOrder()
+    {
+        StringBuilder sortedPawns = new StringBuilder();
+
+        _pawns = _pawns.OrderByDescending(o => o.rolledDice).ToList();
+
+        foreach (var pawn in _pawns)
+        {
+            sortedPawns.Append($"{pawn.name}({pawn.rolledDice})|");
+        }
+
+        Debug.Log($"Sorted order: {sortedPawns}");
+
+        SwitchGameState(GameState.DoMoves);
     }
 }

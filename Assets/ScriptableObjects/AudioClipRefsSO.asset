@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c87bf66cac46c59298fea717afc966, type: 3}
+  m_Name: AudioClipRefsSO
+  m_EditorClassIdentifier: 
+  questionFail:
+  - {fileID: 8300000, guid: 531d6c071f50a5047b41825e891b2e69, type: 3}
+  - {fileID: 8300000, guid: 6ed4e9c7fef93d0449da9a54bf57aca7, type: 3}
+  questionsSuccess:
+  - {fileID: 8300000, guid: 7f0eaf762f8625340b7652d2e467e73c, type: 3}
+  - {fileID: 8300000, guid: 7fcd62ee999b26a4483a44390ccd9615, type: 3}
+  footstep:
+  - {fileID: 8300000, guid: 59837ace7e53efb469165242fe900351, type: 3}
+  - {fileID: 8300000, guid: cb7c36906edb7b647973b839fc4b42ba, type: 3}
+  warning:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 82c2fc9f12de0cf4a8cd347dcfcfd68a, type: 3}
