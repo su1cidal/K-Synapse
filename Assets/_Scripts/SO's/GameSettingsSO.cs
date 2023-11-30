@@ -10,8 +10,7 @@ public class GameSettingsSO : ScriptableObject
     public int CupsToWin = 1;
     public int TurnLength = 60;
     public int TimeToAnswer = 10;
-
-    // public Enum QuestionTheme;
+    public QuestionClassification Classification = QuestionClassification.GeneralKnowledge;
     // public Enum Map;
 
 }

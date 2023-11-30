@@ -5,10 +5,13 @@ public class Pawn : MonoBehaviour
 {
     [SerializeField] public int health = Constants.PLAYER_MAX_HEALTH;
     [SerializeField] public int keys = 0;
-    [SerializeField] public int answeredQuestions = 0;
     [SerializeField] public int rolledDice = -1;
     [SerializeField] public Tile currentMapTile;
-    [Header("----")] [SerializeField] public Material color;
+    [Header("   ")]
+    [SerializeField] public Question[] correctAnswered;
+    [SerializeField] public Question[] wrongAnswered;
+    [Header("   ")]
+    [SerializeField] public Material color;
     [SerializeField] public GameObject visual;
 
     private int _lastPositionEdit;

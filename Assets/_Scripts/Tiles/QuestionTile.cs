@@ -7,6 +7,8 @@ public class QuestionTile : Tile
         Debug.Log("QuestionTile Action");
         // todo call QuestionManager to display question
 
+        QuestionManager.Instance.GetRandomQuestion();
+        
         return true;
     }
 }
