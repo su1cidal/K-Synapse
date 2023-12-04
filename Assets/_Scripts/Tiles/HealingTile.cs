@@ -1,12 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class HealingTile : Tile
 {
-    public override bool DoAction(Pawn player)
+    public override IEnumerator DoAction(Pawn player)
     {
         Debug.Log("HealingTile Action");
         player.AddHealth(Constants.TILE_ADD_HEALTH);
-
-        return true;
+        
+        yield return new WaitForSeconds(1f);
     }
 }

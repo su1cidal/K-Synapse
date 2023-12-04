@@ -11,7 +11,7 @@ public class Pawn : MonoBehaviour
     [SerializeField] public Question[] correctAnswered;
     [SerializeField] public Question[] wrongAnswered;
     [Header("   ")]
-    [SerializeField] public Material color;
+    [SerializeField] public PlayerMaterialsSO materials;
     [SerializeField] public GameObject visual;
 
     private int _lastPositionEdit;
@@ -56,10 +56,9 @@ public class Pawn : MonoBehaviour
         keys += amount;
     }
 
-    public int RollADice()
+    public int RollADice() //todo export to personal class
     {
         rolledDice = Random.Range(Constants.ROLL_MIN_VALUE, Constants.ROLL_MAX_VALUE + 1);
-        Debug.Log($"{this.name} roll: {rolledDice}");
         return rolledDice;
     }
 

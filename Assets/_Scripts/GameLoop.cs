@@ -14,8 +14,6 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private List<Pawn> _pawns;
     [SerializeField] private Map _map;
 
-    public bool isFinished = true;
-
     private GameState _gameState;
 
     private void Awake()
@@ -33,18 +31,8 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
-
         SwitchGameState(GameState.SpawnPlayers);
-
         // todo create players from prefabs
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SwitchGameState(GameState.RollADice);
-        }
     }
 
     private void SpawnPawns()
@@ -84,7 +72,9 @@ public class GameLoop : MonoBehaviour
         }
 
         Debug.Log("All players were moved!");
-        //SwitchGameState(GameState.EndAction);
+        
+        //todo checkIfGameEnded
+        SwitchGameState(GameState.RollADice);
     }
 
     private void SwitchGameState(GameState gameState)

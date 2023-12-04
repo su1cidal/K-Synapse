@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd323d6573349e7baf87ba392650cd0, type: 3}
+  m_Name: LightGray
+  m_EditorClassIdentifier: 
+  PlayerColor: {fileID: 2100000, guid: 6e9fed5e475fb844abcd920c79e39670, type: 2}
+  PlayerAnswer: {fileID: 2100000, guid: 62486855ca88b464a874b32dbaad8b61, type: 2}

@@ -56,9 +56,10 @@ public class PawnMover : MonoBehaviour
         }
 
         if (pawn.rolledDice == 0)
-            yield return new WaitUntil(() => pawn.currentMapTile.DoAction(pawn));
-
-        pawn.SetIsWalking(false);
-        GameLoop.Instance.isFinished = true;
+        {
+            pawn.SetIsWalking(false);
+            
+            yield return StartCoroutine(pawn.currentMapTile.DoAction(pawn));
+        }
     }
 }

@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
 
@@ -12,21 +9,16 @@ public class QuestionManager : MonoBehaviour
 
     [SerializeField] private QuestionRefsSO _questionRefsSo;
     [SerializeField] private GameSettingsSO _gameSettingsSo;
-    [SerializeField] private GameObject _UI;
     
     [SerializeField] private QuestionClassification _classification;
 
     private Question[] _questions;
 
-    public QuestionManager()
-    {
-        if (_gameSettingsSo != null)
-            _classification = _gameSettingsSo.Classification;
-    }
-    
     private void Awake()
     {
         Instance = this;
+        
+        _classification = _gameSettingsSo.classification;
     }
 
     private void Start()
@@ -34,7 +26,7 @@ public class QuestionManager : MonoBehaviour
         _questions = GetQuestionsByClassification(_classification);
     }
 
-    public Question[] GetQuestionsByClassification(QuestionClassification classification)
+    private Question[] GetQuestionsByClassification(QuestionClassification classification)
     {
         foreach (var questionSet in _questionRefsSo.questionSO)
         {
@@ -45,11 +37,6 @@ public class QuestionManager : MonoBehaviour
         }
         
         return null;
-    }
-
-    public void ShowUI(bool value)
-    {
-        _UI.SetActive(value);
     }
 
     public Question GetRandomQuestion()
@@ -80,17 +67,17 @@ public class QuestionManager : MonoBehaviour
         Debug.Log(selected.question);
         return selected;
     }
-
-    private void OnDestroy()
-    {
-        ResetQuestions();
-    }
-
+    
     private void ResetQuestions()
     {
         foreach (var question in _questions)
         {
             question.isSelected = false;
         }
+    }
+
+    private void OnDestroy()
+    {
+        ResetQuestions();
     }
 }

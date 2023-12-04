@@ -1,14 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class QuestionTile : Tile
 {
-    public override bool DoAction(Pawn player)
+    public override IEnumerator DoAction(Pawn player)
     {
         Debug.Log("QuestionTile Action");
-        // todo call QuestionManager to display question
-
-        QuestionManager.Instance.GetRandomQuestion();
         
-        return true;
+        yield return StartCoroutine(QuizHandler.Instance.StartQuiz());
+        Debug.Log("QuestionTile AFTER QUIZ");
     }
 }

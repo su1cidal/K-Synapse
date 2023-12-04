@@ -2,6 +2,6 @@
 public class Question
 {
     public string question;
-    public string[] answers;
+    public Answer[] answers;
     public bool isSelected;
 }

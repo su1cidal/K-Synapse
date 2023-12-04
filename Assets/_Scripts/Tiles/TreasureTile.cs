@@ -1,19 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
 public class TreasureTile : Tile
 {
-    public override bool DoAction(Pawn player)
+    public override IEnumerator DoAction(Pawn player)
     {
         Debug.Log("TreasureTile Action");
         if (player.keys >= Constants.KEYS_TO_OPEN_TREASURE)
         {
             //todo Show treasure interaction window
+            // Only if PLAYER is on it
         }
         else
         {
             //todo Show NoKeys emote above player
         }
 
-        return true;
+        yield return new WaitForSeconds(1f);
     }
 }
