@@ -13,13 +13,30 @@ public class Pawn : MonoBehaviour
     [Header("   ")]
     [SerializeField] public PlayerMaterialsSO materials;
     [SerializeField] public GameObject visual;
+    [SerializeField] private bool _isPlayer;
 
     private int _lastPositionEdit;
     private bool _isWalking;
+    public bool IsAnswered = false;
 
+    public Material GetAnswerMaterial()
+    {
+        if (materials.PlayerAnswer == null)
+        {
+            return null;
+        }
+
+        return materials.PlayerAnswer;
+    }
+    
     public bool IsWalking()
     {
         return _isWalking;
+    }
+    
+    public bool IsPlayer()
+    {
+        return _isPlayer;
     }
 
     public void SetIsWalking(bool value)

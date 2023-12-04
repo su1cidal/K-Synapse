@@ -17,117 +17,23 @@ MonoBehaviour:
   - question: American theoretical physicist, died 1967. Often known as "the father
       of the atomic bomb"
     answers:
-    - answer: 
+    - answer: 1
+      isCorrect: 1
+    - answer: 2
       isCorrect: 0
-    - answer: 
+    - answer: 3
       isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
+    - answer: 4
       isCorrect: 0
     isSelected: 0
   - question: British author, died 1973. Wrote Lord of the Rings
     answers:
-    - answer: 
+    - answer: 1
+      isCorrect: 1
+    - answer: 2
       isCorrect: 0
-    - answer: 
+    - answer: 3
       isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: American filmmaker, died 1959. He made multi movies in the silent era,
-      & went on to produce Cleopatra (1934) & Samson & Delilah (1949)
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: Australian-British writer, died 1996. Wrote Mary Poppins
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: American actor, died 1999. Played General George S. Patton in the film
-      Patton, and General Buck Turgidson in Stanley Kubrick's Dr. Strangelove
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: Author of War of the Worlds (1898)
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: American banker, died 1913. He founded a bank, now the biggest in the
-      US which bears his name.
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: British author, died 2008. Wrote multiple science fiction novels and
-      short stories. Credited with the idea of geostationary satellites (rotate with
-      the Earth). This orbit now bears his name.
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: American sportsman, actor and armed robber
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    isSelected: 0
-  - question: American rapper, singer and record producer. He was the lead member
-      of the hip hop group Black Eyed Peas
-    answers:
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
-      isCorrect: 0
-    - answer: 
+    - answer: 4
       isCorrect: 0
     isSelected: 0

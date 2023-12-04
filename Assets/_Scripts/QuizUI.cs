@@ -17,32 +17,52 @@ public class QuizUI : MonoBehaviour
     [SerializeField] private Button _answer2Button;
     [SerializeField] private Button _answer3Button;
     [SerializeField] private Button _answer4Button;
+    [SerializeField] private GameObject _answersVisual1;
+    [SerializeField] private GameObject _answersVisual2;
+    [SerializeField] private GameObject _answersVisual3;
+    [SerializeField] private GameObject _answersVisual4;
+    [SerializeField] private GameObject _answerVisual;
     
     public event Action OnQuizTextReady;
+    public event Action<Pawn> OnFirstAnswer;
+    public event Action<Pawn> OnSecondAnswer;
+    public event Action<Pawn> OnThirdAnswer;
+    public event Action<Pawn> OnForthAnswer;
 
+    private Pawn player;
+    
     private void Start()
     {
         Hide();
     }
 
-    public void SelectFirstAnswer()// todo IPlayer player
+    public void SetPlayer(Pawn pawn)
     {
-        Debug.Log("First answer is selected!");
+        player = pawn;
     }
     
-    public void SelectSecondAnswer()// todo IPlayer player
+    public void SelectFirstAnswer(Pawn pawn)
     {
-        Debug.Log("Second answer is selected!");
+        AddAnswer(pawn, _answersVisual1);
+        OnFirstAnswer?.Invoke(pawn);
     }
     
-    public void SelectThirdAnswer()// todo IPlayer player
+    public void SelectSecondAnswer(Pawn pawn)
     {
-        Debug.Log("Third answer is selected!");
+        AddAnswer(pawn, _answersVisual2);
+        OnSecondAnswer?.Invoke(pawn);
     }
     
-    public void SelectForthAnswer()// todo IPlayer player
+    public void SelectThirdAnswer(Pawn pawn)
     {
-        Debug.Log("Forth answer is selected!");
+        AddAnswer(pawn, _answersVisual3);
+        OnThirdAnswer?.Invoke(pawn);
+    }
+    
+    public void SelectForthAnswer(Pawn pawn)
+    {
+        AddAnswer(pawn, _answersVisual4);
+        OnForthAnswer?.Invoke(pawn);
     }
 
     public void Show()
@@ -53,6 +73,11 @@ public class QuizUI : MonoBehaviour
     public void Hide()
     {
         _UI.SetActive(false);
+        
+        ClearAsnwersVisual(_answersVisual1);
+        ClearAsnwersVisual(_answersVisual2);
+        ClearAsnwersVisual(_answersVisual3);
+        ClearAsnwersVisual(_answersVisual4);
     }
 
     public void SetQuizText(Question question)
@@ -71,21 +96,40 @@ public class QuizUI : MonoBehaviour
         
         OnQuizTextReady?.Invoke();
     }
+
+    private void AddAnswer(Pawn pawn, GameObject answersVisual)
+    {
+        if(pawn.IsAnswered) return;
+        
+        GameObject newAnswer = Instantiate(_answerVisual, answersVisual.transform);
+        
+        var image = newAnswer.GetComponent<Image>();
+        var material = pawn.GetAnswerMaterial();
+        image.material = material;
+
+        pawn.IsAnswered = true;
+    }
+    
+    private void ClearAsnwersVisual(GameObject answers)
+    {
+        foreach (Transform child in answers.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
     
     private void OnEnable()
     {
-        _answer1Button.GetComponent<Button>().onClick.AddListener(SelectFirstAnswer);
-        _answer2Button.GetComponent<Button>().onClick.AddListener(SelectSecondAnswer);
-        _answer3Button.GetComponent<Button>().onClick.AddListener(SelectThirdAnswer);
-        _answer4Button.GetComponent<Button>().onClick.AddListener(SelectForthAnswer);
-        
+        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(player); });
+        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(player); });
+        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(player); });
+        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(player); });
     }
 
     private void OnDestroy()
     {
-        _answer1Button.GetComponent<Button>().onClick.RemoveListener(SelectFirstAnswer);
-        _answer2Button.GetComponent<Button>().onClick.RemoveListener(SelectSecondAnswer);
-        _answer3Button.GetComponent<Button>().onClick.RemoveListener(SelectThirdAnswer);
-        _answer4Button.GetComponent<Button>().onClick.RemoveListener(SelectForthAnswer);
+        _answer1Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectFirstAnswer(player); });
+        _answer2Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectSecondAnswer(player); });
+        _answer3Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectThirdAnswer(player); });
+        _answer4Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectForthAnswer(player); });
     }
 }
