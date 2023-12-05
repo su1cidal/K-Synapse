@@ -13,8 +13,12 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private PawnMover _pawnMover;
     [SerializeField] private List<Pawn> _pawns;
     [SerializeField] private Map _map;
+    [SerializeField] private CupsToWinUI _cupsToWinUI;
+    [SerializeField] private TurnCountUI _turnCountUI;
+    [SerializeField] private TurnOrderUI _turnOrderUI;
 
     private GameState _gameState;
+    private int _turnCount = 0;
 
     private void Awake()
     {
@@ -26,7 +30,8 @@ public class GameLoop : MonoBehaviour
         {
             Instance = this;
         }
-        // todo ReadGameSettings()
+
+        ReadGameSettings();
     }
 
     private void Start()
@@ -35,6 +40,13 @@ public class GameLoop : MonoBehaviour
         // todo create players from prefabs
     }
 
+    private void ReadGameSettings()
+    {
+        _cupsToWinUI.SetCupsCount(_gameSettings.cupsToWin);
+        _turnCountUI.SetTurnCount(_turnCount, _gameSettings.turnCount);
+    }
+    
+    
     private void SpawnPawns()
     {
         var startTile = _map.GetStartTile();
@@ -74,6 +86,8 @@ public class GameLoop : MonoBehaviour
         Debug.Log("All players were moved!");
         
         //todo checkIfGameEnded
+        _turnCount++;
+        _turnCountUI.SetTurnCount(_turnCount, _gameSettings.turnCount);
         SwitchGameState(GameState.RollADice);
     }
 
@@ -114,13 +128,13 @@ public class GameLoop : MonoBehaviour
         StringBuilder sortedPawns = new StringBuilder();
 
         _pawns = _pawns.OrderByDescending(o => o.rolledDice).ToList();
-
-        foreach (var pawn in _pawns)
-        {
-            sortedPawns.Append($"{pawn.name}({pawn.rolledDice})|");
-        }
-
-        Debug.Log($"Sorted order: {sortedPawns}");
+        
+        _turnOrderUI.SetTurnOrder(_pawns);
+        // foreach (var pawn in _pawns)
+        // {
+        //     sortedPawns.Append($"{pawn.name}({pawn.rolledDice})|");
+        // }
+        // Debug.Log($"Sorted order: {sortedPawns}");
 
         SwitchGameState(GameState.DoMoves);
     }
