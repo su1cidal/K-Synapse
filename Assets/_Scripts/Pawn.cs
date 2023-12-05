@@ -72,6 +72,18 @@ public class Pawn : MonoBehaviour
     {
         keys += amount;
     }
+    
+    public void RemoveKeys(int amount)
+    {
+        if (keys - amount <= Constants.PLAYER_MIN_KEYS)
+        {
+            keys = Constants.PLAYER_MIN_KEYS;
+        }
+        else
+        {
+            keys -= amount;
+        }
+    }
 
     public int RollADice() //todo export to personal class
     {

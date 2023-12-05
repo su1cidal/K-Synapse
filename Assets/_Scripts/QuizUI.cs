@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,12 +32,45 @@ public class QuizUI : MonoBehaviour
     public event Action<Pawn> OnForthAnswer;
 
     private Pawn player;
-    
+    private List<Button> allAnswerButtons;
+
+    private void Awake()
+    {
+        allAnswerButtons = new List<Button>();
+        
+        allAnswerButtons.Add(_answer1Button);
+        allAnswerButtons.Add(_answer2Button);
+        allAnswerButtons.Add(_answer3Button);
+        allAnswerButtons.Add(_answer4Button);
+        
+        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(player); });
+        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(player); });
+        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(player); });
+        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(player); });
+    }
+
     private void Start()
     {
         Hide();
     }
-
+    
+    
+    public void EnableButtons()
+    {
+        foreach (var button in allAnswerButtons)
+        {
+            button.enabled = true;
+        }
+    }
+    
+    public void DisableButtons()
+    {
+        foreach (var button in allAnswerButtons)
+        {
+            button.enabled = false;
+        }
+    }
+    
     public void SetPlayer(Pawn pawn)
     {
         player = pawn;
@@ -43,25 +78,25 @@ public class QuizUI : MonoBehaviour
     
     public void SelectFirstAnswer(Pawn pawn)
     {
-        AddAnswer(pawn, _answersVisual1);
+        AddAnswerVisual(pawn, _answersVisual1);
         OnFirstAnswer?.Invoke(pawn);
     }
     
     public void SelectSecondAnswer(Pawn pawn)
     {
-        AddAnswer(pawn, _answersVisual2);
+        AddAnswerVisual(pawn, _answersVisual2);
         OnSecondAnswer?.Invoke(pawn);
     }
     
     public void SelectThirdAnswer(Pawn pawn)
     {
-        AddAnswer(pawn, _answersVisual3);
+        AddAnswerVisual(pawn, _answersVisual3);
         OnThirdAnswer?.Invoke(pawn);
     }
     
     public void SelectForthAnswer(Pawn pawn)
     {
-        AddAnswer(pawn, _answersVisual4);
+        AddAnswerVisual(pawn, _answersVisual4);
         OnForthAnswer?.Invoke(pawn);
     }
 
@@ -73,16 +108,25 @@ public class QuizUI : MonoBehaviour
     public void Hide()
     {
         _UI.SetActive(false);
-        
-        ClearAsnwersVisual(_answersVisual1);
-        ClearAsnwersVisual(_answersVisual2);
-        ClearAsnwersVisual(_answersVisual3);
-        ClearAsnwersVisual(_answersVisual4);
+
+        Clear();
     }
 
-    public void SetQuizText(Question question)
+    private void Clear()
     {
-        //todo clear previous player answers
+        ClearAsnwerVisual(_answersVisual1);
+        ClearAsnwerVisual(_answersVisual2);
+        ClearAsnwerVisual(_answersVisual3);
+        ClearAsnwerVisual(_answersVisual4);
+
+        foreach (var button in allAnswerButtons)
+        {
+            button.interactable = true;
+        }  
+    }
+    
+    public Answer[] SetQuizText(Question question)
+    {
         _quizQuestion.text = question.question;
 
         var answers = question.answers;
@@ -95,9 +139,21 @@ public class QuizUI : MonoBehaviour
         _answer4.text = answers[3].answer;
         
         OnQuizTextReady?.Invoke();
+
+        return answers;
     }
 
-    private void AddAnswer(Pawn pawn, GameObject answersVisual)
+    public IEnumerator ShowCorrectAnswers(List<int> indices)
+    {
+        foreach (var sortedAnswers in indices)
+        {
+            allAnswerButtons[sortedAnswers].interactable = false;
+        }
+        
+        yield return new WaitForSeconds(3f);
+    }
+    
+    private void AddAnswerVisual(Pawn pawn, GameObject answersVisual)
     {
         if(pawn.IsAnswered) return;
         
@@ -110,21 +166,13 @@ public class QuizUI : MonoBehaviour
         pawn.IsAnswered = true;
     }
     
-    private void ClearAsnwersVisual(GameObject answers)
+    private void ClearAsnwerVisual(GameObject answers)
     {
         foreach (Transform child in answers.transform) {
             GameObject.Destroy(child.gameObject);
         }
     }
     
-    private void OnEnable()
-    {
-        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(player); });
-        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(player); });
-        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(player); });
-        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(player); });
-    }
-
     private void OnDestroy()
     {
         _answer1Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectFirstAnswer(player); });

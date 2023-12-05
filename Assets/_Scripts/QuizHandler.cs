@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,7 +22,9 @@ public class QuizHandler : MonoBehaviour
     private List<Pawn> selectedSecondAnswer;
     private List<Pawn> selectedThirdAnswer;
     private List<Pawn> selectedForthAnswer;
-
+    private Answer[] sortedAnswers;
+    private List<List<Pawn>> listOfListsOfAnswers;
+    
     public delegate void SelectAnswers(Pawn pawn);
     
     private void Awake()
@@ -34,11 +37,17 @@ public class QuizHandler : MonoBehaviour
         selectedSecondAnswer = new List<Pawn>();
         selectedThirdAnswer = new List<Pawn>();
         selectedForthAnswer = new List<Pawn>();
+        listOfListsOfAnswers = new List<List<Pawn>>();
         
         selectAnswersList.Add(_quizUI.SelectFirstAnswer);
         selectAnswersList.Add(_quizUI.SelectSecondAnswer);
         selectAnswersList.Add(_quizUI.SelectThirdAnswer);
         selectAnswersList.Add(_quizUI.SelectForthAnswer);
+        
+        listOfListsOfAnswers.Add(selectedFirstAnswer);
+        listOfListsOfAnswers.Add(selectedSecondAnswer);
+        listOfListsOfAnswers.Add(selectedThirdAnswer);
+        listOfListsOfAnswers.Add(selectedForthAnswer);
         
         _timer.TimeEnded += OnTimeEnded;
         _quizUI.OnQuizTextReady += QuizUIOnOnQuizTextReady;
@@ -51,11 +60,12 @@ public class QuizHandler : MonoBehaviour
     public IEnumerator StartQuiz()
     {
         SetPlayerPawn();
+        _quizUI.EnableButtons();
         
         _isQuizEnded = false;
         
         _currentQuestion = QuestionManager.Instance.GetRandomQuestion();
-        _quizUI.SetQuizText(_currentQuestion);
+        sortedAnswers = _quizUI.SetQuizText(_currentQuestion);
         
         StartCoroutine(AnswerForBots());
         
@@ -73,19 +83,54 @@ public class QuizHandler : MonoBehaviour
         }
     }
 
-    public void EndQuiz()
+    public IEnumerator EndQuiz()
     {
-        // todo Show correct answer
-        // todo check results. Is Answers correct, or damage players who doesnt answer at all
         _timer.StopTimer();
+        _quizUI.DisableButtons();
+        
+        var indices = GetCorrectAnswersIndices();
+        yield return StartCoroutine(_quizUI.ShowCorrectAnswers(indices));
+        
+        ProceedQuizResults(indices);
+        
         _quizUI.Hide();
-
+        ClearPawnIsAnswered();
+        ClearPreviousAnswers();
+        
         _isQuizEnded = true;
-
-        ClearPawnAnswers();
     }
 
-    private void ClearPawnAnswers()
+    private void ProceedQuizResults(List<int> indices)
+    {
+        var wrongPlayers = _pawns.ToList();
+
+        foreach (var index in indices)
+        {
+            var correctPlayers = listOfListsOfAnswers[index];
+
+            foreach (var player in correctPlayers)
+            {
+                player.AddKeys(Constants.KEYS_TO_ADD_AFTER_CORRECT_ANSWER);
+
+                wrongPlayers.Remove(player);
+            }
+        }
+
+        foreach (var player in wrongPlayers)
+        {
+            player.RemoveKeys(Constants.KEYS_TO_REMOVE_AFTER_CORRECT_ANSWER);
+        }
+    }
+
+    private void ClearPreviousAnswers()
+    {
+        foreach (var list in listOfListsOfAnswers)
+        {
+            list.Clear();
+        }
+    }
+
+    private void ClearPawnIsAnswered()
     {
         foreach (var pawn in _pawns)
         {
@@ -95,7 +140,8 @@ public class QuizHandler : MonoBehaviour
 
     private IEnumerator AnswerForBots()
     {
-        int waitTime = Random.Range(1, 2);
+        yield return new WaitForSeconds(1);
+        float waitTime = Random.Range(1, 2.25f);
         
         foreach (var pawn in _pawns)
         {
@@ -115,6 +161,19 @@ public class QuizHandler : MonoBehaviour
         _timer.StartTimer();
         _quizUI.Show();
     }
+
+    private List<int> GetCorrectAnswersIndices()
+    {
+        List<int> correctAnswersIndices = new List<int>();
+        
+        for (int i = 0; i < sortedAnswers.Length; i++)
+        {
+            if(sortedAnswers[i].isCorrect)
+                correctAnswersIndices.Add(i);
+        }
+
+        return correctAnswersIndices;
+    }
     
     private void OnTimeEnded()
     {
@@ -123,7 +182,7 @@ public class QuizHandler : MonoBehaviour
         //get other lists, and remove keys to players in it
         //than highlight correct answer at UI                      Probably should use IEnumerator
         
-        EndQuiz();
+        StartCoroutine(EndQuiz());
     }
     
     private bool IsQuizEnded()

@@ -8,6 +8,5 @@ public class QuestionTile : Tile
         Debug.Log("QuestionTile Action");
         
         yield return StartCoroutine(QuizHandler.Instance.StartQuiz());
-        Debug.Log("QuestionTile AFTER QUIZ");
     }
 }

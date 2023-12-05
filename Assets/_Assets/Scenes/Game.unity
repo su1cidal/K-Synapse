@@ -845,6 +845,54 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.30196095
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 657768dd0fe620d498dfde65380cd1bd, type: 3}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49cbae1389574c843b492c0f1d4dffee, type: 3}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8146bf8673865d640a93a211fcce4a0b, type: 3}
+    - target: {fileID: 244015339761706821, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14a4994f580bcbf4fbac7c8dfd740828, type: 3}
     - target: {fileID: 2382448766588313486, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1008,6 +1056,10 @@ PrefabInstance:
     - target: {fileID: 6959704497346112173, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
       propertyPath: m_Name
       value: Answer#1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959704497346112173, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7080530210070283152, guid: 3b875d22ebde8534d80c619233135f89, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2839,6 +2891,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 4f41ad42031d5ac40ac0c0da5e524c44, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 657768dd0fe620d498dfde65380cd1bd, type: 3}
+    - target: {fileID: 244015339761706821, guid: 4f41ad42031d5ac40ac0c0da5e524c44, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49cbae1389574c843b492c0f1d4dffee, type: 3}
+    - target: {fileID: 244015339761706821, guid: 4f41ad42031d5ac40ac0c0da5e524c44, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8146bf8673865d640a93a211fcce4a0b, type: 3}
+    - target: {fileID: 244015339761706821, guid: 4f41ad42031d5ac40ac0c0da5e524c44, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14a4994f580bcbf4fbac7c8dfd740828, type: 3}
     - target: {fileID: 2382448766588313486, guid: 4f41ad42031d5ac40ac0c0da5e524c44, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3095,6 +3163,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 657768dd0fe620d498dfde65380cd1bd, type: 3}
+    - target: {fileID: 244015339761706821, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49cbae1389574c843b492c0f1d4dffee, type: 3}
+    - target: {fileID: 244015339761706821, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8146bf8673865d640a93a211fcce4a0b, type: 3}
+    - target: {fileID: 244015339761706821, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14a4994f580bcbf4fbac7c8dfd740828, type: 3}
     - target: {fileID: 2382448766588313486, guid: 97d6ae4746d87e540995f043fd1c72a9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4376,6 +4464,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 244015339761706821, guid: 9fdc247745cb9e041a83ef971508854c, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 657768dd0fe620d498dfde65380cd1bd, type: 3}
+    - target: {fileID: 244015339761706821, guid: 9fdc247745cb9e041a83ef971508854c, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49cbae1389574c843b492c0f1d4dffee, type: 3}
+    - target: {fileID: 244015339761706821, guid: 9fdc247745cb9e041a83ef971508854c, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8146bf8673865d640a93a211fcce4a0b, type: 3}
+    - target: {fileID: 244015339761706821, guid: 9fdc247745cb9e041a83ef971508854c, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14a4994f580bcbf4fbac7c8dfd740828, type: 3}
     - target: {fileID: 2382448766588313486, guid: 9fdc247745cb9e041a83ef971508854c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
