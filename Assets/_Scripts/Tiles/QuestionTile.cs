@@ -5,8 +5,10 @@ public class QuestionTile : Tile
 {
     public override IEnumerator DoAction(Pawn player)
     {
-        Debug.Log("QuestionTile Action");
+        ShowVFX();
         
+        yield return new WaitForSeconds(1f);
         yield return StartCoroutine(QuizHandler.Instance.StartQuiz());
+        HideVFX();
     }
 }

@@ -5,9 +5,10 @@ public class RespawnTile : Tile
 {
     public override IEnumerator DoAction(Pawn player)
     {
-        Debug.Log("RespawnTile Action");
+        ShowVFX();
         // todo create cool respawn effect
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
+        HideVFX();
     }
 }

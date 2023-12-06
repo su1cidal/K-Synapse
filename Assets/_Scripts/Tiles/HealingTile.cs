@@ -5,9 +5,10 @@ public class HealingTile : Tile
 {
     public override IEnumerator DoAction(Pawn player)
     {
-        Debug.Log("HealingTile Action");
+        ShowVFX();
         player.AddHealth(Constants.TILE_ADD_HEALTH);
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
+        HideVFX();
     }
 }

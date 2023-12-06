@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,26 @@ public abstract class Tile : MonoBehaviour
 {
     [SerializeField] public List<Pawn> pawnsOnTile;
     [SerializeField] public List<Tile> adjacentTiles;
+    
+    [SerializeField] private GameObject _vfx;
 
     public abstract IEnumerator DoAction(Pawn player);
 
+    private void Start()
+    {
+        HideVFX();
+    }
+
+    public void ShowVFX()
+    {
+        _vfx.SetActive(true);
+    }
+    
+    public void HideVFX()
+    {
+        _vfx.SetActive(false);
+    }
+    
     public void AddPawn(Pawn pawn)
     {
         if (!pawnsOnTile.Contains(pawn))
