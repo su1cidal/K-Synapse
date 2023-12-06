@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,8 +11,12 @@ public class Pawn : MonoBehaviour
     [SerializeField] public int keys = 0;
     [SerializeField] public int cups = 0;
     [SerializeField] public int place = 0;
-    [SerializeField] public Question[] correctAnswered;
-    [SerializeField] public Question[] wrongAnswered;
+    [Header("Collectables")]
+    [SerializeField] public int damageReceived = 0;
+    [SerializeField] public int keysGained = 0;
+    [SerializeField] public int keysLost = 0;
+    [SerializeField] public List<Question> correctAnswered;
+    [SerializeField] public List<Question> wrongAnswered;
     [Header("   ")]
     [SerializeField] public int rolledDice = -1;
     [SerializeField] public Tile currentMapTile;
@@ -20,8 +25,7 @@ public class Pawn : MonoBehaviour
     [SerializeField] public PlayerMaterialsSO materials;
     
     [SerializeField] private bool _isPlayer;
-
-    private int _lastPositionEdit;
+    
     private bool _isWalking;
     
     public bool IsAnswered = false;
@@ -132,7 +136,8 @@ public class Pawn : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    public void SetLastPositionEdit(int editValue) => _lastPositionEdit = editValue;
-
-    public int GetLastPositionEdit() => _lastPositionEdit;
+    public void FixPosition()
+    {
+        visual.transform.position = new Vector3(0,0,0);
+    }
 }

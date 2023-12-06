@@ -16,6 +16,7 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private CupsToWinUI _cupsToWinUI;
     [SerializeField] private TurnCountUI _turnCountUI;
     [SerializeField] private TurnOrderUI _turnOrderUI;
+    [SerializeField] private ScoreboardUI _scoreboardUI;
 
     private GameState _gameState;
     private int _turnCount = 0;
@@ -38,6 +39,19 @@ public class GameLoop : MonoBehaviour
     {
         SwitchGameState(GameState.SpawnPlayers);
         // todo create players from prefabs
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _scoreboardUI.Show();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            _scoreboardUI.Hide();
+        }
     }
 
     private void ReadGameSettings()
@@ -112,11 +126,6 @@ public class GameLoop : MonoBehaviour
             case GameState.DoMoves:
                 Debug.Log("Entered state DoMoves");
                 StartCoroutine(MovePawns());
-                break;
-            case GameState.CycleAction:
-                Debug.Log("Entered state CycleAction");
-                //todo Show question interaction window
-
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

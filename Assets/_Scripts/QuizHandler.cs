@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -111,7 +109,7 @@ public class QuizHandler : MonoBehaviour
             foreach (var player in correctPlayers)
             {
                 player.AddKeys(Constants.KEYS_TO_ADD_AFTER_CORRECT_ANSWER);
-
+                player.correctAnswered.Add(_currentQuestion);
                 wrongPlayers.Remove(player);
             }
         }
@@ -119,6 +117,7 @@ public class QuizHandler : MonoBehaviour
         foreach (var player in wrongPlayers)
         {
             player.RemoveKeys(Constants.KEYS_TO_REMOVE_AFTER_CORRECT_ANSWER);
+            player.wrongAnswered.Add(_currentQuestion);
         }
     }
 
@@ -177,11 +176,6 @@ public class QuizHandler : MonoBehaviour
     
     private void OnTimeEnded()
     {
-        //todo create a method than return all correct answers
-        //get listS with players who selected correct answer -> assign them keys
-        //get other lists, and remove keys to players in it
-        //than highlight correct answer at UI                      Probably should use IEnumerator
-        
         StartCoroutine(EndQuiz());
     }
     
