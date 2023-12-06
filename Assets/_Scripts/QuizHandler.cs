@@ -151,8 +151,6 @@ public class QuizHandler : MonoBehaviour
             }
             yield return new WaitForSeconds(waitTime);
         }
-        
-        
     }
     
     private void QuizUIOnOnQuizTextReady()

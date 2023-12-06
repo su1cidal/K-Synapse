@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +13,7 @@ public class ScoreboardUI : MonoBehaviour
 
     public void Show()
     {
+        Clear();
         FillScoreboard(_pawns);
         this.gameObject.SetActive(true);
     }
@@ -17,7 +21,6 @@ public class ScoreboardUI : MonoBehaviour
     public void Hide()
     {
         this.gameObject.SetActive(false);
-        Clear();
     }
 
     private void Clear()
@@ -47,6 +50,32 @@ public class ScoreboardUI : MonoBehaviour
             playerEntry.SetDamageReceived(pawn.damageReceived.ToString());
             playerEntry.SetKeysGained(pawn.keysGained.ToString());
             playerEntry.SetKeysLost(pawn.keysLost.ToString());
+
+            newEntry.name = $"z{pawn.correctAnswered.Count}";
         }
+        
+        // todo sort a scoreboard
+        //Sort(this.transform);
     }
+
+    // private void Sort(Transform current)
+    // {
+    //     IOrderedEnumerable<Transform> orderedChildren = current.Cast<Transform>().OrderByDescending(tr => Number(tr.name));
+    //
+    //     foreach (Transform child in orderedChildren)
+    //     {
+    //         Undo.SetTransformParent(child, null, "Reorder children");
+    //         Undo.SetTransformParent(child, current, "Reorder children");
+    //     }
+    // }
+    //
+    // private int Number(string str) 
+    // { 
+    //     int result_ignored;
+    //     if (int.TryParse(str,out result_ignored))
+    //         return result_ignored;
+    //
+    //     else 
+    //         return 0;
+    // }
 }

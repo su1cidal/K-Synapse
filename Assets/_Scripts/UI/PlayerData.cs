@@ -33,14 +33,14 @@ public class PlayerData : MonoBehaviour
 
     private void ChangeSelfName()
     {
-        this.name = (_player.keys + _player.cups * 10).ToString();
+        this.name = (_player.keys + _player.cups * 100).ToString();
 
         OnChangeName?.Invoke();
     }
 
     public void UpdatePlace()
     {
-        _player.place = this.transform.GetSiblingIndex();
+        _player.place = this.transform.GetSiblingIndex()+1;
         _playerNumber.text = $"#{_player.place}";
     }
 
@@ -53,7 +53,7 @@ public class PlayerData : MonoBehaviour
     {
         _playerColorImage.material = _player.GetMaterialUI();
         _playerText.text = _player.playerName;
-        _playerNumber.text = $"#{_player.place}";
+        _playerNumber.text = $"#{_player.place+1}";
     }
 
     private void OnPlayerKeysChanged()

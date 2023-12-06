@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -138,6 +139,7 @@ public class Pawn : MonoBehaviour
 
     public void FixPosition()
     {
-        visual.transform.position = new Vector3(0,0,0);
+        var resetVector = new Vector3(0,0,0);
+        visual.transform.DOLocalMove(resetVector, 0.5f);
     }
 }

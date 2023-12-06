@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = System.Random;
 
@@ -45,7 +46,7 @@ public abstract class Tile : MonoBehaviour
     {
         if (pawnsOnTile.Contains(pawn))
         {
-            //FixPawnTransforms(pawn);
+            pawn.FixPosition();
             pawnsOnTile.Remove(pawn);
         }
     }
@@ -54,24 +55,45 @@ public abstract class Tile : MonoBehaviour
     {
         if (pawnsOnTile.Count < 2) return;
 
+        Vector3 resetVector;
         var rand = new Random();
-
-        var move = rand.Next(0, 3);
-
+        var move = rand.Next(0, 7);
+        
         switch (move)
         {
             case 0:
-                pawn.visual.transform.position += new Vector3(+Constants.PAWN_OFFSET, 0f, +Constants.PAWN_OFFSET);
+                resetVector = new Vector3(+Constants.PAWN_OFFSET, 0f, +Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
                 break;
             case 1:
-                pawn.visual.transform.position += new Vector3(+Constants.PAWN_OFFSET, 0f, -Constants.PAWN_OFFSET);
+                resetVector = new Vector3(+Constants.PAWN_OFFSET, 0f, -Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
                 break;
             case 2:
-                pawn.visual.transform.position += new Vector3(-Constants.PAWN_OFFSET, 0f, +Constants.PAWN_OFFSET);
+                resetVector = new Vector3(-Constants.PAWN_OFFSET, 0f, +Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
                 break;
             case 3:
-                pawn.visual.transform.position += new Vector3(-Constants.PAWN_OFFSET, 0f, -Constants.PAWN_OFFSET);
+                resetVector = new Vector3(-Constants.PAWN_OFFSET, 0f, -Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
+                break;
+            case 4:
+                resetVector = new Vector3(+Constants.PAWN_OFFSET, 0f, 0);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
+                break;
+            case 5:
+                resetVector = new Vector3(0, 0f, -Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
+                break;
+            case 6:
+                resetVector = new Vector3(0, 0f, +Constants.PAWN_OFFSET);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
+                break;
+            case 7:
+                resetVector = new Vector3(-Constants.PAWN_OFFSET, 0f, 0);
+                pawn.visual.transform.DOLocalMove(resetVector, 0.5f);
                 break;
         }
+        
     }
 }
