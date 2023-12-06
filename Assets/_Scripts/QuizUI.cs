@@ -78,24 +78,28 @@ public class QuizUI : MonoBehaviour
     
     public void SelectFirstAnswer(Pawn pawn)
     {
+        if(pawn.IsAnswered) return;
         AddAnswerVisual(pawn, _answersVisual1);
         OnFirstAnswer?.Invoke(pawn);
     }
     
     public void SelectSecondAnswer(Pawn pawn)
     {
+        if(pawn.IsAnswered) return;
         AddAnswerVisual(pawn, _answersVisual2);
         OnSecondAnswer?.Invoke(pawn);
     }
     
     public void SelectThirdAnswer(Pawn pawn)
     {
+        if(pawn.IsAnswered) return;
         AddAnswerVisual(pawn, _answersVisual3);
         OnThirdAnswer?.Invoke(pawn);
     }
     
     public void SelectForthAnswer(Pawn pawn)
     {
+        if(pawn.IsAnswered) return;
         AddAnswerVisual(pawn, _answersVisual4);
         OnForthAnswer?.Invoke(pawn);
     }
@@ -155,12 +159,10 @@ public class QuizUI : MonoBehaviour
     
     private void AddAnswerVisual(Pawn pawn, GameObject answersVisual)
     {
-        if(pawn.IsAnswered) return;
-        
         GameObject newAnswer = Instantiate(_answerVisual, answersVisual.transform);
         
         var image = newAnswer.GetComponent<Image>();
-        var material = pawn.GetAnswerMaterial();
+        var material = pawn.GetMaterialUI();
         image.material = material;
 
         pawn.IsAnswered = true;

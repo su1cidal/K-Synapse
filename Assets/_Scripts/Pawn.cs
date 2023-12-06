@@ -1,25 +1,36 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Pawn : MonoBehaviour
 {
-    [SerializeField] public int health = Constants.PLAYER_MAX_HEALTH;
+    [SerializeField] public string playerName;
+    [SerializeField] public int health = (int)Constants.PLAYER_MAX_HEALTH;
     [SerializeField] public int keys = 0;
-    [SerializeField] public int rolledDice = -1;
-    [SerializeField] public Tile currentMapTile;
-    [Header("   ")]
+    [SerializeField] public int cups = 0;
+    [SerializeField] public int place = 0;
     [SerializeField] public Question[] correctAnswered;
     [SerializeField] public Question[] wrongAnswered;
     [Header("   ")]
-    [SerializeField] public PlayerMaterialsSO materials;
+    [SerializeField] public int rolledDice = -1;
+    [SerializeField] public Tile currentMapTile;
+    [Header("   ")]
     [SerializeField] public GameObject visual;
+    [SerializeField] public PlayerMaterialsSO materials;
+    
     [SerializeField] private bool _isPlayer;
 
     private int _lastPositionEdit;
     private bool _isWalking;
+    
     public bool IsAnswered = false;
 
-    public Material GetAnswerMaterial()
+    public event Action OnHealthChanged;
+    public event Action OnKeysChanged;
+    public event Action OnCupsChanged;
+    
+    public Material GetMaterialUI()
     {
         if (materials.PlayerAnswer == null)
         {
@@ -44,33 +55,36 @@ public class Pawn : MonoBehaviour
         _isWalking = value;
     }
 
-    public void DoDamage(int amount)
-    {
-        if (health - amount <= Constants.PLAYER_MIN_HEALTH)
-        {
-            health = Constants.PLAYER_MIN_HEALTH;
-        }
-        else
-        {
-            health -= amount;
-        }
-    }
-
     public void AddHealth(int amount)
     {
         if (health + amount >= Constants.PLAYER_MAX_HEALTH)
         {
-            health = Constants.PLAYER_MAX_HEALTH;
+            health = (int)Constants.PLAYER_MAX_HEALTH;
         }
         else
         {
             health += amount;
         }
+        OnHealthChanged?.Invoke();
+    }
+    
+    public void DoDamage(int amount)
+    {
+        if (health - amount <= Constants.PLAYER_MIN_HEALTH)
+        {
+            health = (int)Constants.PLAYER_MIN_HEALTH;
+        }
+        else
+        {
+            health -= amount;
+        }
+        OnHealthChanged?.Invoke();
     }
 
     public void AddKeys(int amount)
     {
         keys += amount;
+        OnKeysChanged?.Invoke();
     }
     
     public void RemoveKeys(int amount)
@@ -83,12 +97,39 @@ public class Pawn : MonoBehaviour
         {
             keys -= amount;
         }
+        OnKeysChanged?.Invoke();
+    }
+    
+    public void AddCups(int amount)
+    {
+        cups += Constants.CUPS_TO_ADD_AT_TREASURE_TILE;
+        OnCupsChanged?.Invoke();
+    }
+    
+    public void RemoveCups(int amount)
+    {
+        if (cups - amount <= Constants.CUPS_TO_ADD_AT_TREASURE_TILE)
+        {
+            cups = Constants.CUPS_TO_ADD_AT_TREASURE_TILE;
+        }
+        else
+        {
+            cups -= amount;
+        }
+        OnCupsChanged?.Invoke();
     }
 
     public int RollADice() //todo export to personal class
     {
         rolledDice = Random.Range(Constants.ROLL_MIN_VALUE, Constants.ROLL_MAX_VALUE + 1);
         return rolledDice;
+    }
+
+    private IEnumerator ShowRolledDice()
+    {
+        //todo realise it
+
+        yield return new WaitForSeconds(1f);
     }
 
     public void SetLastPositionEdit(int editValue) => _lastPositionEdit = editValue;

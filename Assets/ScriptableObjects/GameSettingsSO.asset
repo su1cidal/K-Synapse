@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c06514be1a830d4bac82c992047119e, type: 3}
   m_Name: GameSettingsSO
   m_EditorClassIdentifier: 
-  playerCount: 2
-  turnCount: 15
+  playerCount: 4
+  turnCount: 10
   cupsToWin: 1
-  turnLength: 60
   timeToAnswer: 10
   classification: 0

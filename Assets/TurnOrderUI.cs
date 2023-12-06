@@ -16,7 +16,7 @@ public class TurnOrderUI : MonoBehaviour
             GameObject newIcon = Instantiate(_playerVisual, _turns.transform);
         
             var image = newIcon.GetComponent<Image>();
-            var material = pawn.GetAnswerMaterial();
+            var material = pawn.GetMaterialUI();
             image.material = material;
         }
     }
