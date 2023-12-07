@@ -31,7 +31,7 @@ public class QuizUI : MonoBehaviour
     public event Action<Pawn> OnThirdAnswer;
     public event Action<Pawn> OnForthAnswer;
 
-    private Pawn player;
+    private Pawn _player;
     private List<Button> allAnswerButtons;
 
     private void Awake()
@@ -43,10 +43,10 @@ public class QuizUI : MonoBehaviour
         allAnswerButtons.Add(_answer3Button);
         allAnswerButtons.Add(_answer4Button);
         
-        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(player); });
-        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(player); });
-        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(player); });
-        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(player); });
+        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(_player); });
+        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(_player); });
+        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(_player); });
+        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(_player); });
     }
 
     private void Start()
@@ -73,7 +73,7 @@ public class QuizUI : MonoBehaviour
     
     public void SetPlayer(Pawn pawn)
     {
-        player = pawn;
+        _player = pawn;
     }
     
     public void SelectFirstAnswer(Pawn pawn)
@@ -177,9 +177,9 @@ public class QuizUI : MonoBehaviour
     
     private void OnDestroy()
     {
-        _answer1Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectFirstAnswer(player); });
-        _answer2Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectSecondAnswer(player); });
-        _answer3Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectThirdAnswer(player); });
-        _answer4Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectForthAnswer(player); });
+        _answer1Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectFirstAnswer(_player); });
+        _answer2Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectSecondAnswer(_player); });
+        _answer3Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectThirdAnswer(_player); });
+        _answer4Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectForthAnswer(_player); });
     }
 }

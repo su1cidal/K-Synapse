@@ -18,7 +18,8 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private TurnOrderUI _turnOrderUI;
     [SerializeField] private ScoreboardUI _scoreboardUI;
 
-    private GameState _gameState;
+    [SerializeField] private GameState _gameState;
+    [SerializeField] private int _timeScale = 1;
     private int _turnCount = 0;
 
     private void Awake()
@@ -43,6 +44,7 @@ public class GameLoop : MonoBehaviour
 
     private void Update()
     {
+        Time.timeScale = _timeScale;
         if (Input.GetKeyDown(KeyCode.S))
         {
             _scoreboardUI.Show();

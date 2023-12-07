@@ -25,13 +25,14 @@ public class Pawn : MonoBehaviour
     [SerializeField] public GameObject visual;
     [SerializeField] public PlayerMaterialsSO materials;
     
-    [SerializeField] private bool _isPlayer;
+    [SerializeField] private bool _isPlayer = false;
     
     private bool _isWalking;
     
     public bool IsAnswered = false;
 
     public event Action OnHealthChanged;
+    public event Action<Pawn> OnDeath;
     public event Action OnKeysChanged;
     public event Action OnCupsChanged;
     
@@ -55,11 +56,22 @@ public class Pawn : MonoBehaviour
         return _isPlayer;
     }
 
+    public void MakePlayer()
+    {
+        _isPlayer = true;
+    }
+    
     public void SetIsWalking(bool value)
     {
         _isWalking = value;
     }
 
+    public void Heal()
+    {
+        health = (int)Constants.PLAYER_MAX_HEALTH;
+        OnHealthChanged?.Invoke();
+    }
+    
     public void AddHealth(int amount)
     {
         if (health + amount >= Constants.PLAYER_MAX_HEALTH)
@@ -78,6 +90,7 @@ public class Pawn : MonoBehaviour
         if (health - amount <= Constants.PLAYER_MIN_HEALTH)
         {
             health = (int)Constants.PLAYER_MIN_HEALTH;
+            OnDeath?.Invoke(this);
         }
         else
         {
@@ -105,7 +118,7 @@ public class Pawn : MonoBehaviour
         OnKeysChanged?.Invoke();
     }
     
-    public void AddCups(int amount)
+    public void AddCup()
     {
         cups += Constants.CUPS_TO_ADD_AT_TREASURE_TILE;
         OnCupsChanged?.Invoke();

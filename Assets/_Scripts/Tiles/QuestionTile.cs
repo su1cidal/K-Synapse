@@ -8,7 +8,9 @@ public class QuestionTile : Tile
         ShowVFX();
         
         yield return new WaitForSeconds(1f);
+        
         yield return StartCoroutine(QuizHandler.Instance.StartQuiz());
+        
         HideVFX();
     }
 }

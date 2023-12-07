@@ -4,7 +4,7 @@ public class Constants
     public const int ROLL_MAX_VALUE = 6;
     public const float PAWN_OFFSET = 0.2f;
     public const int CUPS_TO_ADD_AT_TREASURE_TILE = 1;
-    public const int KEYS_TO_OPEN_TREASURE = 35;
+    public const int KEYS_TO_OPEN_TREASURE = 40;
     public const int KEYS_TO_ADD_AT_KEYS_TILE = 7;
     public const int KEYS_TO_ADD_AFTER_CORRECT_ANSWER = 9;
     public const int KEYS_TO_REMOVE_AFTER_CORRECT_ANSWER = 9;
