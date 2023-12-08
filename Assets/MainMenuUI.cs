@@ -13,6 +13,8 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private TMP_Text _currentWindow;
     [SerializeField] private GameObject _mainMenu;
     
+    [SerializeField] private GameSettingsUI _gameSettingsUI;
+    
     private void Awake()
     {
         _play.GetComponent<Button>().onClick.AddListener(ShowGameSettings);
@@ -30,7 +32,8 @@ public class MainMenuUI : MonoBehaviour
     {
         _currentWindow.text = "Game Settings";
         Hide();
-
+        
+        _gameSettingsUI.Show();
         // open GameSettings Window
         // button BACK and START GAME
 
@@ -46,6 +49,7 @@ public class MainMenuUI : MonoBehaviour
     private void HideGameSettings()
     {
         Show();
+        _gameSettingsUI.Hide();
         // hide GameSettings Window
     }
 

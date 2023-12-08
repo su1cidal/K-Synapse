@@ -52,14 +52,21 @@ public class GameSettingsUI : MonoBehaviour
     [SerializeField] private Button _back;
     [SerializeField] private Button _StartGame;
     
+    public void Show()
+    {
+        _photostudio.SetActive(true);
+        this.gameObject.SetActive(true);
+    }
+    
+    public void Hide()
+    {
+        _photostudio.SetActive(false);
+        this.gameObject.SetActive(false);
+    }
+    
     private void Awake()
     {
         _nextMaterial.GetComponent<Button>().onClick.AddListener(ChangeColor);
-    }
-
-    private void Show()
-    {
-        _photostudio.SetActive(true);
     }
 
     private void ChangeColor()
