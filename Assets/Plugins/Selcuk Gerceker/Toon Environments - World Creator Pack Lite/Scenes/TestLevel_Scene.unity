@@ -1017,14 +1017,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   health: 0
   keys: 0
-  answeredQuestions: 0
+  cups: 0
+  place: 0
+  damageReceived: 0
+  keysGained: 0
+  keysLost: 0
+  correctAnswered: []
+  wrongAnswered: []
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
-  color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 0}
+  materials: {fileID: 0}
+  _isPlayer: 0
+  IsAnswered: 0
 --- !u!1001 &121001642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4611,14 +4619,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   health: 0
   keys: 0
-  answeredQuestions: 0
+  cups: 0
+  place: 0
+  damageReceived: 0
+  keysGained: 0
+  keysLost: 0
+  correctAnswered: []
+  wrongAnswered: []
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
-  color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 0}
+  materials: {fileID: 0}
+  _isPlayer: 0
+  IsAnswered: 0
 --- !u!1001 &514963097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6947,14 +6963,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   health: 0
   keys: 0
-  answeredQuestions: 0
+  cups: 0
+  place: 0
+  damageReceived: 0
+  keysGained: 0
+  keysLost: 0
+  correctAnswered: []
+  wrongAnswered: []
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
-  color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 0}
+  materials: {fileID: 0}
+  _isPlayer: 0
+  IsAnswered: 0
 --- !u!1001 &858288176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9774,14 +9798,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   health: 0
   keys: 0
-  answeredQuestions: 0
+  cups: 0
+  place: 0
+  damageReceived: 0
+  keysGained: 0
+  keysLost: 0
+  correctAnswered: []
+  wrongAnswered: []
   rolledDice: 0
-  isFinalStep: 1
   currentMapTile: {fileID: 0}
-  color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 0}
+  materials: {fileID: 0}
+  _isPlayer: 0
+  IsAnswered: 0
 --- !u!1 &1287428985
 GameObject:
   m_ObjectHideFlags: 0

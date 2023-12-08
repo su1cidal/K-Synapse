@@ -23,6 +23,7 @@ public class Pawn : MonoBehaviour
     [SerializeField] public Tile currentMapTile;
     [Header("   ")]
     [SerializeField] public GameObject visual;
+    [SerializeField] public GameObject model;
     [SerializeField] public PlayerMaterialsSO materials;
     
     [SerializeField] private bool _isPlayer = false;
@@ -35,7 +36,24 @@ public class Pawn : MonoBehaviour
     public event Action<Pawn> OnDeath;
     public event Action OnKeysChanged;
     public event Action OnCupsChanged;
+
+    public Pawn(string playerName, PlayerMaterialsSO materials, bool isPlayer)
+    {
+        this.playerName = playerName;
+        this.materials = materials;
+        
+        if(isPlayer) MakePlayer();
+    }
     
+    private void Start()
+    {
+        if (materials.PlayerColor != null)
+        {
+            var modelMeshRenderer = model.GetComponent<MeshRenderer>();
+            modelMeshRenderer.material = materials.PlayerColor;
+        }
+    }
+
     public Material GetMaterialUI()
     {
         if (materials.PlayerAnswer == null)
@@ -50,11 +68,8 @@ public class Pawn : MonoBehaviour
     {
         return _isWalking;
     }
-    
-    public bool IsPlayer()
-    {
-        return _isPlayer;
-    }
+
+    public bool IsPlayer => _isPlayer;
 
     public void MakePlayer()
     {

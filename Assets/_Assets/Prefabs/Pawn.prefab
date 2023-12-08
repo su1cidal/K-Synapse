@@ -46,13 +46,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80060c3908f448f3be63b4d00473a7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   health: 30
   keys: 0
-  answeredQuestions: 0
+  cups: 0
+  place: 0
+  damageReceived: 0
+  keysGained: 0
+  keysLost: 0
+  correctAnswered: []
+  wrongAnswered: []
   rolledDice: 0
   currentMapTile: {fileID: 0}
-  color: {fileID: 2100000, guid: 829059bd934930a499175e816794e435, type: 2}
   visual: {fileID: 2631088801791066608}
+  model: {fileID: 6308234999419400542}
+  materials: {fileID: 11400000, guid: 2270f0d0e5595014899dda580e452bc3, type: 2}
+  _isPlayer: 0
+  IsAnswered: 0
 --- !u!114 &5513356484517007894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +192,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &6308234999419400542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7316171728564813889, guid: 1e74965a724e7504389cd9d500c24faa, type: 3}
+  m_PrefabInstance: {fileID: 3603751767504384287}
+  m_PrefabAsset: {fileID: 0}

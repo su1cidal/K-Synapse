@@ -74,7 +74,7 @@ public class QuizHandler : MonoBehaviour
     {
         foreach (var pawn in _pawns)
         {
-            if (pawn.IsPlayer())
+            if (pawn.IsPlayer)
             {
                 _quizUI.SetPlayer(pawn);
             }
@@ -144,7 +144,7 @@ public class QuizHandler : MonoBehaviour
         
         foreach (var pawn in _pawns)
         {
-            if (!pawn.IsPlayer())
+            if (!pawn.IsPlayer)
             {
                 var answerMethod = selectAnswersList.PickRandom();
                 answerMethod(pawn);
