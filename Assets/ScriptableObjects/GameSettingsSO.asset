@@ -17,3 +17,5 @@ MonoBehaviour:
   cupsToWin: 1
   timeToAnswer: 10
   classification: 0
+  playerName: '#profile_name'
+  playerMaterials: {fileID: 11400000, guid: 6411d63580f721c478147b04498ceef9, type: 2}

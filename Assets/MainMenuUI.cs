@@ -14,6 +14,7 @@ public class MainMenuUI : MonoBehaviour
     [SerializeField] private GameObject _mainMenu;
     
     [SerializeField] private GameSettingsUI _gameSettingsUI;
+    [SerializeField] private Button _back;
     
     private void Awake()
     {
@@ -21,6 +22,12 @@ public class MainMenuUI : MonoBehaviour
         _settings.GetComponent<Button>().onClick.AddListener(ShowSettings);
         _unlocks.GetComponent<Button>().onClick.AddListener(ShowUnlocks);
         _exit.GetComponent<Button>().onClick.AddListener(ShowExitWindow);
+
+        _back.GetComponent<Button>().onClick.AddListener(() => {
+            HideGameSettings();
+            HideOptions();
+            HideUnlocks();
+        });
     }
 
     private void Start()
@@ -34,16 +41,6 @@ public class MainMenuUI : MonoBehaviour
         Hide();
         
         _gameSettingsUI.Show();
-        // open GameSettings Window
-        // button BACK and START GAME
-
-        // Player count
-        // Turn count
-        // Cups to win
-        // Time to answer
-        // probably should select between three modes: FIRST TO CUP/QUESTION LIMIT/TURN LIMIT
-
-        // can move to Game scene
     }
 
     private void HideGameSettings()
@@ -99,10 +96,14 @@ public class MainMenuUI : MonoBehaviour
         _currentWindow.text = "Main Menu";
         
         _mainMenu.SetActive(true);
+        
+        _back.gameObject.SetActive(false);
     }
 
     private void Hide()
     {
         _mainMenu.SetActive(false);
+        
+        _back.gameObject.SetActive(true);
     }
 }

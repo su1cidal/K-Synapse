@@ -14,4 +14,16 @@ public class Constants
     public const int PLAYER_MIN_CUPS = 0;
     public const int TILE_ADD_HEALTH = 10;
     public const int TILE_DO_DAMAGE = 8;
+    
+    public const int PLAYER_COUNT_MIN = 2;
+    public const int PLAYER_COUNT_MAX = 8;
+    
+    public const int TURN_COUNT_MIN = 10;
+    public const int TURN_COUNT_MAX = 100;
+    
+    public const int CUPS_TO_WIN_MIN = 1;
+    public const int CUPS_TO_WIN_MAX = 10;
+    
+    public const int TIMER_TO_ANSWER_MIN = 10;
+    public const int TIMER_TO_ANSWER_MAX = 60;
 }
