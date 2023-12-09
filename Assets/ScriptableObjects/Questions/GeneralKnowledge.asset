@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff49d9449194b77b62472d5542b3263, type: 3}
+  m_Name: GeneralKnowledge
+  m_EditorClassIdentifier: 
+  classification: 4
+  questions:
+  - question: What is the capital city of Australia?
+    answers:
+    - answer: Sydney
+      isCorrect: 0
+    - answer: Canberra
+      isCorrect: 1
+    - answer: Melbourne
+      isCorrect: 0
+    - answer: Brisbane
+      isCorrect: 0
+    isSelected: 0
+  - question: Which planet is known as the "Red Planet"?
+    answers:
+    - answer: Venus
+      isCorrect: 0
+    - answer: Mars
+      isCorrect: 1
+    - answer: Jupiter
+      isCorrect: 0
+    - answer: Saturn
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest mammal in the world?
+    answers:
+    - answer: Elephant
+      isCorrect: 0
+    - answer: Blue Whale
+      isCorrect: 1
+    - answer: Giraffe
+      isCorrect: 0
+    - answer: Hippopotamus
+      isCorrect: 0
+    isSelected: 0
+  - question: Who wrote the play "Romeo and Juliet"?
+    answers:
+    - answer: William Shakespeare
+      isCorrect: 0
+    - answer: Charles Dickens
+      isCorrect: 1
+    - answer: Jane Austen
+      isCorrect: 0
+    - answer: Mark Twain
+      isCorrect: 0
+    isSelected: 0
+  - question: In what year did the United States declare its independence?
+    answers:
+    - answer: 1764
+      isCorrect: 0
+    - answer: 1776
+      isCorrect: 1
+    - answer: 1789
+      isCorrect: 0
+    - answer: 1789
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest ocean on Earth?
+    answers:
+    - answer: Indian Ocean
+      isCorrect: 0
+    - answer: Atlantic Ocean
+      isCorrect: 0
+    - answer: Southern Ocean
+      isCorrect: 0
+    - answer: Pacific Ocean
+      isCorrect: 1
+    isSelected: 0
+  - question: What is the currency of Japan?
+    answers:
+    - answer: Won
+      isCorrect: 0
+    - answer: Yen
+      isCorrect: 1
+    - answer: Ringgit
+      isCorrect: 0
+    - answer: Baht
+      isCorrect: 0
+    isSelected: 0
+  - question: Who painted the famous artwork "Starry Night"?
+    answers:
+    - answer: Leonardo da Vinci
+      isCorrect: 0
+    - answer: Vincent van Gogh
+      isCorrect: 1
+    - answer: Pablo Picasso
+      isCorrect: 0
+    - answer: Baht
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the chemical symbol for gold?
+    answers:
+    - answer: Au
+      isCorrect: 1
+    - answer: Ag
+      isCorrect: 0
+    - answer: Fe
+      isCorrect: 0
+    - answer: Cu
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the world's longest river?
+    answers:
+    - answer: Nile
+      isCorrect: 0
+    - answer: Amazon
+      isCorrect: 1
+    - answer: Yangtze
+      isCorrect: 0
+    - answer: Mississippi
+      isCorrect: 0
+    isSelected: 0
+  - question: Who wrote the famous play "Hamlet"?
+    answers:
+    - answer: William Wordsworth
+      isCorrect: 0
+    - answer: William Faulkner
+      isCorrect: 0
+    - answer: William Shakespeare
+      isCorrect: 1
+    - answer: William Blake
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the currency of South Africa?
+    answers:
+    - answer: Rand
+      isCorrect: 1
+    - answer: Peso
+      isCorrect: 0
+    - answer: Euro
+      isCorrect: 0
+    - answer: Rupiah
+      isCorrect: 0
+    isSelected: 0
+  - question: Which element has the chemical symbol "O"?
+    answers:
+    - answer: Oxygen
+      isCorrect: 1
+    - answer: Gold
+      isCorrect: 0
+    - answer: Uranium
+      isCorrect: 0
+    - answer: Silver
+      isCorrect: 0
+    isSelected: 0
+  - question: In what year did the Berlin Wall fall, symbolizing the end of the Cold
+      War?
+    answers:
+    - answer: 1985
+      isCorrect: 0
+    - answer: 1989
+      isCorrect: 1
+    - answer: 1991
+      isCorrect: 0
+    - answer: 1995
+      isCorrect: 0
+    isSelected: 0
+  - question: Who was the first woman to win a Nobel Prize?
+    answers:
+    - answer: Marie Curie
+      isCorrect: 1
+    - answer: Mother Teresa
+      isCorrect: 0
+    - answer: Dorothy Crowfoot Hodgkin
+      isCorrect: 0
+    - answer: Malala Yousafzai
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the capital city of Canada?
+    answers:
+    - answer: Ottawa
+      isCorrect: 1
+    - answer: Toronto
+      isCorrect: 0
+    - answer: Vancouver
+      isCorrect: 0
+    - answer: Montreal
+      isCorrect: 0
+    isSelected: 0
+  - question: Which planet is known as the "Blue Planet"?
+    answers:
+    - answer: Venus
+      isCorrect: 0
+    - answer: Earth
+      isCorrect: 1
+    - answer: Neptune
+      isCorrect: 0
+    - answer: Uranus
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest desert in the world?
+    answers:
+    - answer: Sahara Desert
+      isCorrect: 0
+    - answer: Gobi Desert
+      isCorrect: 0
+    - answer: Antarctic Desert
+      isCorrect: 1
+    - answer: Arabian Desert
+      isCorrect: 0
+    isSelected: 0
+  - question: In Greek mythology, who is the king of the gods?
+    answers:
+    - answer: Apollo
+      isCorrect: 0
+    - answer: Zeus
+      isCorrect: 1
+    - answer: Poseidon
+      isCorrect: 0
+    - answer: Hades
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the official language of Brazil?
+    answers:
+    - answer: Portuguese
+      isCorrect: 1
+    - answer: Spanish
+      isCorrect: 0
+    - answer: Italian
+      isCorrect: 0
+    - answer: French
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the smallest prime number?
+    answers:
+    - answer: 0
+      isCorrect: 0
+    - answer: 1
+      isCorrect: 0
+    - answer: 2
+      isCorrect: 1
+    - answer: 3
+      isCorrect: 0
+    isSelected: 0
+  - question: Which mountain is the highest peak in North America?
+    answers:
+    - answer: Mount Everest
+      isCorrect: 0
+    - answer: Denali
+      isCorrect: 1
+    - answer: Mount McKinley
+      isCorrect: 0
+    - answer: Mount Kilimanjaro
+      isCorrect: 0
+    isSelected: 0
+  - question: Who is the author of the Harry Potter book series?
+    answers:
+    - answer: J.R.R. Tolkien
+      isCorrect: 0
+    - answer: J.K. Rowling
+      isCorrect: 1
+    - answer: George R.R. Martin
+      isCorrect: 0
+    - answer: Suzanne Collins
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest organ in the human body?
+    answers:
+    - answer: Heart
+      isCorrect: 0
+    - answer: Liver
+      isCorrect: 1
+    - answer: Brain
+      isCorrect: 0
+    - answer: Lungs
+      isCorrect: 0
+    isSelected: 0
+  - question: Which planet is known as the "Morning Star" or "Evening Star"?
+    answers:
+    - answer: Mars
+      isCorrect: 0
+    - answer: Venus
+      isCorrect: 1
+    - answer: Jupiter
+      isCorrect: 0
+    - answer: Mercury
+      isCorrect: 0
+    isSelected: 0
+  - question: In what year did the Titanic sink?
+    answers:
+    - answer: 1910
+      isCorrect: 0
+    - answer: 1912
+      isCorrect: 1
+    - answer: 1920
+      isCorrect: 0
+    - answer: 1930
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the capital city of South Korea?
+    answers:
+    - answer: Tokyo
+      isCorrect: 0
+    - answer: Beijing
+      isCorrect: 0
+    - answer: Seoul
+      isCorrect: 1
+    - answer: Bangkok
+      isCorrect: 0
+    isSelected: 0
+  - question: Who developed the theory of relativity?
+    answers:
+    - answer: Isaac Newton
+      isCorrect: 0
+    - answer: Albert Einstein
+      isCorrect: 1
+    - answer: Niels Bohr
+      isCorrect: 0
+    - answer: Max Planck
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the chemical symbol for water?
+    answers:
+    - answer: W
+      isCorrect: 0
+    - answer: O2
+      isCorrect: 0
+    - answer: H2O
+      isCorrect: 1
+    - answer: CO2
+      isCorrect: 0
+    isSelected: 0
+  - question: Which continent is the most populous?
+    answers:
+    - answer: Africa
+      isCorrect: 0
+    - answer: Asia
+      isCorrect: 1
+    - answer: Europe
+      isCorrect: 0
+    - answer: North America
+      isCorrect: 0
+    isSelected: 0

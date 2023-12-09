@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff49d9449194b77b62472d5542b3263, type: 3}
+  m_Name: Nature
+  m_EditorClassIdentifier: 
+  classification: 6
+  questions:
+  - question: What is the process by which green plants and some other organisms
+      use sunlight to synthesize foods with the help of chlorophyll?
+    answers:
+    - answer: Photosynthesis
+      isCorrect: 1
+    - answer: Respiration
+      isCorrect: 0
+    - answer: Transpiration
+      isCorrect: 0
+    - answer: Germination
+      isCorrect: 0
+    isSelected: 0
+  - question: Which gas makes up the majority of Earth's atmosphere?
+    answers:
+    - answer: Oxygen
+      isCorrect: 0
+    - answer: Carbon Dioxide
+      isCorrect: 0
+    - answer: Nitrogen
+      isCorrect: 1
+    - answer: Hydrogen
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest mammal in the world?
+    answers:
+    - answer: Elephant
+      isCorrect: 0
+    - answer: Blue Whale
+      isCorrect: 1
+    - answer: Giraffe
+      isCorrect: 0
+    - answer: Hippopotamus
+      isCorrect: 0
+    isSelected: 0
+  - question: Which biome is characterized by dense evergreen forests with coniferous
+      trees and cold climates?
+    answers:
+    - answer: Tropical Rainforest
+      isCorrect: 0
+    - answer: Tundra
+      isCorrect: 0
+    - answer: Taiga
+      isCorrect: 1
+    - answer: Grassland
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the process by which water changes from a liquid to a gas,
+      primarily from the surface of lakes and oceans?
+    answers:
+    - answer: Precipitation
+      isCorrect: 0
+    - answer: Condensation
+      isCorrect: 0
+    - answer: Evaporation
+      isCorrect: 1
+    - answer: Sublimation
+      isCorrect: 0
+    isSelected: 0
+  - question: Which planet is known as the "Red Planet" due to its reddish appearance?
+    answers:
+    - answer: Venus
+      isCorrect: 0
+    - answer: Mars
+      isCorrect: 1
+    - answer: Jupiter
+      isCorrect: 0
+    - answer: Saturn
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the process by which plants release water vapor into the atmosphere?
+    answers:
+    - answer: Condensation
+      isCorrect: 0
+    - answer: Respiration
+      isCorrect: 0
+    - answer: Transpiration
+      isCorrect: 1
+    - answer: Absorption
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the term for a community of plants and animals interacting
+      with their environment in a specific area?
+    answers:
+    - answer: Ecosystem
+      isCorrect: 1
+    - answer: Habitat
+      isCorrect: 0
+    - answer: Niche
+      isCorrect: 0
+    - answer: Biosphere
+      isCorrect: 0
+    isSelected: 0
+  - question: Which natural disaster is characterized by the shaking of the Earth's
+      surface, often caused by tectonic plate movements?
+    answers:
+    - answer: Hurricane
+      isCorrect: 0
+    - answer: Tornado
+      isCorrect: 0
+    - answer: Earthquake
+      isCorrect: 1
+    - answer: Tsunami
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the largest ocean on Earth?
+    answers:
+    - answer: Indian Ocean
+      isCorrect: 0
+    - answer: Atlantic Ocean
+      isCorrect: 0
+    - answer: Southern Ocean
+      isCorrect: 0
+    - answer: Pacific Ocean
+      isCorrect: 1
+    isSelected: 0
+  - question: Which gas is essential for photosynthesis in plants?
+    answers:
+    - answer: Oxygen
+      isCorrect: 0
+    - answer: Carbon Dioxide
+      isCorrect: 1
+    - answer: Nitrogen
+      isCorrect: 0
+    - answer: Hydrogen
+      isCorrect: 0
+    isSelected: 0
+  - question: Which biome is characterized by cold temperatures, permafrost, and
+      a layer of permanently frozen subsoil?
+    answers:
+    - answer: Tundra
+      isCorrect: 1
+    - answer: Tropical Rainforest
+      isCorrect: 0
+    - answer: Desert
+      isCorrect: 0
+    - answer: Grassland
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the term for the gradual change in species composition in a
+      given area over time?
+    answers:
+    - answer: Evolution
+      isCorrect: 0
+    - answer: Adaptation
+      isCorrect: 0
+    - answer: Succession
+      isCorrect: 1
+    - answer: Migration
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the process by which water changes from a liquid to a gas,
+      primarily from the surface of lakes and oceans?
+    answers:
+    - answer: Precipitation
+      isCorrect: 0
+    - answer: Condensation
+      isCorrect: 0
+    - answer: Evaporation
+      isCorrect: 1
+    - answer: Sublimation
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the term for a group of organisms of the same species living
+      in the same area?
+    answers:
+    - answer: Ecosystem
+      isCorrect: 0
+    - answer: Population
+      isCorrect: 1
+    - answer: Community
+      isCorrect: 0
+    - answer: Habitat
+      isCorrect: 0
+    isSelected: 0
+  - question: Which natural phenomenon is characterized by the shaking of the Earth's
+      surface, often caused by tectonic plate movements?
+    answers:
+    - answer: Hurricane
+      isCorrect: 0
+    - answer: Tornado
+      isCorrect: 0
+    - answer: Earthquake
+      isCorrect: 1
+    - answer: Tsunami
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the primary function of the chlorophyll in plants during photosynthesis?
+    answers:
+    - answer: Absorb carbon dioxide
+      isCorrect: 0
+    - answer: Absorb sunlight and convert it into energy
+      isCorrect: 1
+    - answer: Release oxygen
+      isCorrect: 0
+    - answer: Facilitate nutrient absorption
+      isCorrect: 0
+    isSelected: 0
+  - question: Which natural disaster is characterized by a rapid flow of snow down
+      a mountain slope?
+    answers:
+    - answer: Avalanche
+      isCorrect: 1
+    - answer: Landslide
+      isCorrect: 0
+    - answer: Tornado
+      isCorrect: 0
+    - answer: Tsunami
+      isCorrect: 0
+    isSelected: 0

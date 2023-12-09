@@ -179,6 +179,7 @@ public class GameSettingsUI : MonoBehaviour
             
             _inputField.text = "";
             _name.color = Color.red;
+            _inputField.placeholder.GetComponent<TMP_Text>().color = Color.red;
         }
         else
         {

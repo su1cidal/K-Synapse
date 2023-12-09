@@ -28,6 +28,9 @@ public class MainMenuUI : MonoBehaviour
             HideOptions();
             HideUnlocks();
         });
+
+        Application.targetFrameRate = 100;
+        // todo remove targetframerate?
     }
 
     private void Start()

@@ -1,11 +1,11 @@
 public enum QuestionClassification
 {
-    GeneralKnowledge,
-    TVAndFilms,
-    Music,
-    SportAndGames,
     ArtAndLiterature,
-    History,
+    Music,
     Geography,
-    ScienceAndNature
+    Physics,
+    GeneralKnowledge,
+    History,
+    Nature,
+    ComputerScience,
 }

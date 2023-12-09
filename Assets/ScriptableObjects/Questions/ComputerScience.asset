@@ -1,0 +1,354 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff49d9449194b77b62472d5542b3263, type: 3}
+  m_Name: ComputerScience
+  m_EditorClassIdentifier: 
+  classification: 7
+  questions:
+  - question: What does HTML stand for?
+    answers:
+    - answer: Hyper Transfer Markup Language
+      isCorrect: 0
+    - answer: Hyper Text Makeup Language
+      isCorrect: 0
+    - answer: Hyperlink and Text Markup Language
+      isCorrect: 1
+    - answer: High-level Text Management Language
+      isCorrect: 0
+    isSelected: 0
+  - question: In programming, what does the acronym IDE stand for?
+    answers:
+    - answer: Integrated Development Environment
+      isCorrect: 1
+    - answer: Interactive Design Environment
+      isCorrect: 0
+    - answer: Intelligent Design Execution
+      isCorrect: 0
+    - answer: Interface Development Engine
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the primary purpose of a firewall in computer security?
+    answers:
+    - answer: Detecting viruses
+      isCorrect: 0
+    - answer: Filtering network traffic
+      isCorrect: 1
+    - answer: Encrypting data
+      isCorrect: 0
+    - answer: Managing user authentication
+      isCorrect: 0
+    isSelected: 0
+  - question: Which programming language is known for its use in developing mobile
+      applications?
+    answers:
+    - answer: Python
+      isCorrect: 0
+    - answer: Java
+      isCorrect: 0
+    - answer: Swift
+      isCorrect: 1
+    - answer: C#
+      isCorrect: 0
+    isSelected: 0
+  - question: What does SQL stand for?
+    answers:
+    - answer: Structured Query Language
+      isCorrect: 1
+    - answer: Simple Question Language
+      isCorrect: 0
+    - answer: Server Query Logic
+      isCorrect: 0
+    - answer: Software Quality Language
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the purpose of the command "git clone" in version control?
+    answers:
+    - answer: Create a new repository
+      isCorrect: 0
+    - answer: Clone an existing repository
+      isCorrect: 1
+    - answer: Commit changes
+      isCorrect: 0
+    - answer: Merge branches
+      isCorrect: 0
+    isSelected: 0
+  - question: In computer networking, what does IP stand for?
+    answers:
+    - answer: Internet Protocol
+      isCorrect: 1
+    - answer: Information Processing
+      isCorrect: 0
+    - answer: Integrated Port
+      isCorrect: 0
+    - answer: Internet Provider
+      isCorrect: 0
+    isSelected: 0
+  - question: Which data structure follows the Last In, First Out (LIFO) principle?
+    answers:
+    - answer: Queue
+      isCorrect: 0
+    - answer: Stack
+      isCorrect: 1
+    - answer: Linked List
+      isCorrect: 0
+    - answer: Hash Table
+      isCorrect: 0
+    isSelected: 0
+  - question: What does CPU stand for?
+    answers:
+    - answer: Central Processing Unit
+      isCorrect: 1
+    - answer: Computer Processing Unit
+      isCorrect: 0
+    - answer: Central Program Unit
+      isCorrect: 0
+    - answer: Control Processing Unit
+      isCorrect: 0
+    isSelected: 0
+  - question: Which encryption algorithm is commonly used for securing internet communication?
+    answers:
+    - answer: DES
+      isCorrect: 0
+    - answer: RSA
+      isCorrect: 0
+    - answer: AES
+      isCorrect: 1
+    - answer: MD5
+      isCorrect: 0
+    isSelected: 0
+  - question: What does the acronym "URL" stand for?
+    answers:
+    - answer: Uniform Resource Locator
+      isCorrect: 1
+    - answer: Universal Reference Link
+      isCorrect: 0
+    - answer: Unified Resource Locator
+      isCorrect: 0
+    - answer: User Response Link
+      isCorrect: 0
+    isSelected: 0
+  - question: Which programming language is commonly used for developing web applications
+      and is known for its simplicity and readability?
+    answers:
+    - answer: Java
+      isCorrect: 0
+    - answer: Python
+      isCorrect: 1
+    - answer: C++
+      isCorrect: 0
+    - answer: Ruby
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the purpose of the HTML<head> element in a web page?
+    answers:
+    - answer: Display content
+      isCorrect: 0
+    - answer: Define the main content area
+      isCorrect: 0
+    - answer: Provide metadata
+      isCorrect: 1
+    - answer: Insert images
+      isCorrect: 0
+    isSelected: 0
+  - question: In object-oriented programming, what is encapsulation?
+    answers:
+    - answer: Breaking code into smaller functions
+      isCorrect: 0
+    - answer: Combining data and methods into a single unit
+      isCorrect: 1
+    - answer: Ensuring code runs faster
+      isCorrect: 0
+    - answer: Connecting objects through inheritance
+      isCorrect: 0
+    isSelected: 0
+  - question: What does the term "API" stand for in the context of software development?
+    answers:
+    - answer: Advanced Programming Interface
+      isCorrect: 0
+    - answer: Application Programming Interface
+      isCorrect: 1
+    - answer: Automated Process Integration
+      isCorrect: 0
+    - answer: Advanced Protocol Integration
+      isCorrect: 0
+    isSelected: 0
+  - question: In networking, what does "LAN" stand for?
+    answers:
+    - answer: Local Area Network
+      isCorrect: 1
+    - answer: Long-range Access Node
+      isCorrect: 0
+    - answer: Large Application Network
+      isCorrect: 0
+    - answer: Low-latency Adapter Node
+      isCorrect: 0
+    isSelected: 0
+  - question: Which sorting algorithm has an average and worst-case time complexity
+      of O(n log n)?
+    answers:
+    - answer: Bubble Sort
+      isCorrect: 0
+    - answer: Merge Sort
+      isCorrect: 1
+    - answer: Insertion Sort
+      isCorrect: 0
+    - answer: Selection Sort
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the primary function of the "git" version control system?
+    answers:
+    - answer: Code compilation
+      isCorrect: 0
+    - answer: Project management
+      isCorrect: 0
+    - answer: Version tracking and control
+      isCorrect: 1
+    - answer: Database administration
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the purpose of the CSS (Cascading Style Sheets) language in
+      web development?
+    answers:
+    - answer: Server-side scripting
+      isCorrect: 0
+    - answer: Client-side scripting
+      isCorrect: 0
+    - answer: Styling and layout of web pages
+      isCorrect: 1
+    - answer: Database management
+      isCorrect: 0
+    isSelected: 0
+  - question: Which programming paradigm is focused on representing the program state
+      as a set of mutable objects?
+    answers:
+    - answer: Procedural programming
+      isCorrect: 0
+    - answer: Functional programming
+      isCorrect: 0
+    - answer: Object-oriented programming
+      isCorrect: 1
+    - answer: Imperative programming
+      isCorrect: 0
+    isSelected: 0
+  - question: In computer security, what does the acronym "VPN" stand for?
+    answers:
+    - answer: Virtual Personal Network
+      isCorrect: 0
+    - answer: Virtual Private Network
+      isCorrect: 0
+    - answer: Verified Protection Network
+      isCorrect: 1
+    - answer: Volatile Private Network
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the primary function of the DNS (Domain Name System) in networking?
+    answers:
+    - answer: Encrypting data transmission
+      isCorrect: 0
+    - answer: Converting domain names to IP addresses
+      isCorrect: 1
+    - answer: Load balancing
+      isCorrect: 0
+    - answer: Routing data packets
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the purpose of the "grep" command in Unix-like operating systems?
+    answers:
+    - answer: Search and replace text in files
+      isCorrect: 0
+    - answer: Display system information
+      isCorrect: 0
+    - answer: Search for patterns in text files
+      isCorrect: 1
+    - answer: List all files in a directory
+      isCorrect: 0
+    isSelected: 0
+  - question: Which data structure organizes data in a way that allows for efficient
+      search, insert, and delete operations?
+    answers:
+    - answer: Array
+      isCorrect: 0
+    - answer: Linked List
+      isCorrect: 0
+    - answer: Hash Table
+      isCorrect: 1
+    - answer: Binary Tree
+      isCorrect: 0
+    isSelected: 0
+  - question: In software development, what does the term "agile" refer to?
+    answers:
+    - answer: A programming language
+      isCorrect: 0
+    - answer: A development methodology
+      isCorrect: 1
+    - answer: A type of bug
+      isCorrect: 0
+    - answer: A version control system
+      isCorrect: 0
+    isSelected: 0
+  - question: What does the term "IoT" stand for?
+    answers:
+    - answer: Internet of Technology
+      isCorrect: 0
+    - answer: Internet of Things
+      isCorrect: 1
+    - answer: Input Output Transmission
+      isCorrect: 0
+    - answer: Integrated Online Tools
+      isCorrect: 0
+    isSelected: 0
+  - question: Which programming language was developed by Microsoft and is commonly
+      used for developing Windows applications?
+    answers:
+    - answer: Python
+      isCorrect: 0
+    - answer: Java
+      isCorrect: 0
+    - answer: C#
+      isCorrect: 0
+    - answer: C++
+      isCorrect: 1
+    isSelected: 0
+  - question: What is the purpose of a "firewall" in network security?
+    answers:
+    - answer: Encrypting data
+      isCorrect: 0
+    - answer: Monitoring network traffic
+      isCorrect: 0
+    - answer: Protecting against unauthorized access
+      isCorrect: 1
+    - answer: Reducing latency in data transmission
+      isCorrect: 0
+    isSelected: 0
+  - question: What is the primary function of the "chmod" command in Unix-like operating
+      systems?
+    answers:
+    - answer: Change modification date of a file
+      isCorrect: 0
+    - answer: Change ownership of a file
+      isCorrect: 0
+    - answer: Change file permissions
+      isCorrect: 1
+    - answer: Compress files into a zip archive
+      isCorrect: 0
+    isSelected: 0
+  - question: In computer security, what does the acronym "VPN" stand for?
+    answers:
+    - answer: Virtual Personal Network
+      isCorrect: 0
+    - answer: Virtual Private Network
+      isCorrect: 1
+    - answer: Verified Protection Network
+      isCorrect: 0
+    - answer: Volatile Private Network
+      isCorrect: 0
+    isSelected: 0

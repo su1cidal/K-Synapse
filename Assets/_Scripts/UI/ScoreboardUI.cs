@@ -59,12 +59,14 @@ public class ScoreboardUI : MonoBehaviour
     private void Sort(Transform current)
     {
         IOrderedEnumerable<Transform> orderedChildren = current.Cast<Transform>().OrderByDescending(tr => Number(tr.name));
-    
+
+        #if UNITY_EDITOR
         foreach (Transform child in orderedChildren)
         {
             Undo.SetTransformParent(child, null, "Reorder children");
             Undo.SetTransformParent(child, current, "Reorder children");
         }
+        #endif
     }
     
     private int Number(string str) 
