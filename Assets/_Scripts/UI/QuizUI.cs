@@ -42,11 +42,6 @@ public class QuizUI : MonoBehaviour
         allAnswerButtons.Add(_answer2Button);
         allAnswerButtons.Add(_answer3Button);
         allAnswerButtons.Add(_answer4Button);
-        
-        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(_player); });
-        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(_player); });
-        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(_player); });
-        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(_player); });
     }
 
     private void Start()
@@ -171,11 +166,19 @@ public class QuizUI : MonoBehaviour
     private void ClearAsnwerVisual(GameObject answers)
     {
         foreach (Transform child in answers.transform) {
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
-    
-    private void OnDestroy()
+
+    private void OnEnable()
+    {
+        _answer1Button.GetComponent<Button>().onClick.AddListener(delegate { SelectFirstAnswer(_player); });
+        _answer2Button.GetComponent<Button>().onClick.AddListener(delegate { SelectSecondAnswer(_player); });
+        _answer3Button.GetComponent<Button>().onClick.AddListener(delegate { SelectThirdAnswer(_player); });
+        _answer4Button.GetComponent<Button>().onClick.AddListener(delegate { SelectForthAnswer(_player); });
+    }
+
+    private void OnDisable()
     {
         _answer1Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectFirstAnswer(_player); });
         _answer2Button.GetComponent<Button>().onClick.RemoveListener(delegate { SelectSecondAnswer(_player); });

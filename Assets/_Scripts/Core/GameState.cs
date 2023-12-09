@@ -4,5 +4,5 @@ public enum GameState
     RollADice,
     SortMoveOrder,
     DoMoves,
-    CycleAction,
+    IsEnd,
 }

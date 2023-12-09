@@ -10,7 +10,7 @@ public class QuizHandler : MonoBehaviour
     
     [SerializeField] private QuizUI _quizUI;
     [SerializeField] private Timer _timer;
-    [SerializeField] private Pawn[] _pawns;
+    [SerializeField] private PawnRepository _pawnRepository;
     
     private List<SelectAnswers> selectAnswersList;
     private bool _isQuizEnded = false;
@@ -72,7 +72,7 @@ public class QuizHandler : MonoBehaviour
 
     private void SetPlayerPawn()
     {
-        foreach (var pawn in _pawns)
+        foreach (var pawn in _pawnRepository.GetPawns())
         {
             if (pawn.IsPlayer)
             {
@@ -100,7 +100,7 @@ public class QuizHandler : MonoBehaviour
 
     private void ProceedQuizResults(List<int> indices)
     {
-        var wrongPlayers = _pawns.ToList();
+        var wrongPlayers = _pawnRepository.GetPawns().ToList();
 
         foreach (var index in indices)
         {
@@ -131,7 +131,7 @@ public class QuizHandler : MonoBehaviour
 
     private void ClearPawnIsAnswered()
     {
-        foreach (var pawn in _pawns)
+        foreach (var pawn in _pawnRepository.GetPawns())
         {
             pawn.IsAnswered = false;
         }
@@ -139,10 +139,9 @@ public class QuizHandler : MonoBehaviour
 
     private IEnumerator AnswerForBots()
     {
-        yield return new WaitForSeconds(1);
-        float waitTime = Random.Range(1, 2.25f);
+        float waitTime = Random.Range(0.5f, 1.4f);
         
-        foreach (var pawn in _pawns)
+        foreach (var pawn in _pawnRepository.GetPawns())
         {
             if (!pawn.IsPlayer)
             {

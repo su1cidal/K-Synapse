@@ -21,6 +21,8 @@ public class PlayerData : MonoBehaviour
     [Header(" ")]
     [SerializeField] private Pawn _player;
 
+    private int _cupMultiplierToBalanceLeaderboard = 1000;
+
     public event Action OnChangeName;
 
     public void SetPlayer (Pawn pawn)
@@ -33,7 +35,7 @@ public class PlayerData : MonoBehaviour
 
     private void ChangeSelfName()
     {
-        this.name = (_player.keys + _player.cups * 100).ToString();
+        this.name = (_player.keys + _player.cups * _cupMultiplierToBalanceLeaderboard).ToString();
 
         OnChangeName?.Invoke();
     }

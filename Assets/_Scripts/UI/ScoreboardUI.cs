@@ -1,35 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreboardUI : MonoBehaviour
 {
+    [SerializeField] private GameObject _UI;
+    [SerializeField] private GameObject _entriesPlaceHolder;
     [SerializeField] private GameObject _playerEntry;
-    [SerializeField] private List<Pawn> _pawns;
+    [SerializeField] private PawnRepository _pawnRepository;
 
     public void Show()
     {
         Clear();
-        FillScoreboard(_pawns);
-        this.gameObject.SetActive(true);
+        FillScoreboard(_pawnRepository.GetPawns());
+        _UI.gameObject.SetActive(true);
     }
     
     public void Hide()
     {
-        this.gameObject.SetActive(false);
+        _UI.gameObject.SetActive(false);
     }
 
     private void Clear()
     {
-        foreach (Transform child in this.transform)
+        foreach (Transform child in _UI.transform)
         {
-            if (child.TryGetComponent<PlayerEntryUI>(out PlayerEntryUI playerEntry))
+            if (child.TryGetComponent(out PlayerEntryUI playerEntry))
             {
-                GameObject.Destroy(playerEntry.gameObject);
+                Destroy(playerEntry.gameObject);
             }
             
         }
@@ -39,7 +38,7 @@ public class ScoreboardUI : MonoBehaviour
     {
         foreach (var pawn in pawns)
         {
-            GameObject newEntry = Instantiate(_playerEntry, this.transform);
+            GameObject newEntry = Instantiate(_playerEntry, _entriesPlaceHolder.transform);
             
             var playerEntry = newEntry.GetComponent<PlayerEntryUI>();
             
@@ -51,31 +50,30 @@ public class ScoreboardUI : MonoBehaviour
             playerEntry.SetKeysGained(pawn.keysGained.ToString());
             playerEntry.SetKeysLost(pawn.keysLost.ToString());
 
-            newEntry.name = $"z{pawn.correctAnswered.Count}";
+            newEntry.name = $"{pawn.correctAnswered.Count}";
         }
         
-        // todo sort a scoreboard
-        //Sort(this.transform);
+        Sort(_entriesPlaceHolder.transform);
     }
 
-    // private void Sort(Transform current)
-    // {
-    //     IOrderedEnumerable<Transform> orderedChildren = current.Cast<Transform>().OrderByDescending(tr => Number(tr.name));
-    //
-    //     foreach (Transform child in orderedChildren)
-    //     {
-    //         Undo.SetTransformParent(child, null, "Reorder children");
-    //         Undo.SetTransformParent(child, current, "Reorder children");
-    //     }
-    // }
-    //
-    // private int Number(string str) 
-    // { 
-    //     int result_ignored;
-    //     if (int.TryParse(str,out result_ignored))
-    //         return result_ignored;
-    //
-    //     else 
-    //         return 0;
-    // }
+    private void Sort(Transform current)
+    {
+        IOrderedEnumerable<Transform> orderedChildren = current.Cast<Transform>().OrderByDescending(tr => Number(tr.name));
+    
+        foreach (Transform child in orderedChildren)
+        {
+            Undo.SetTransformParent(child, null, "Reorder children");
+            Undo.SetTransformParent(child, current, "Reorder children");
+        }
+    }
+    
+    private int Number(string str) 
+    { 
+        int result_ignored;
+        if (int.TryParse(str,out result_ignored))
+            return result_ignored;
+    
+        else 
+            return 0;
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -8,11 +6,13 @@ public class PlayersUI : MonoBehaviour
 {
     [SerializeField] private GameSettingsSO _gameSettingsSo;
     [SerializeField] private GameObject _playerDataPlaceHolder;
-    
-    [SerializeField] private List<Pawn> _pawns;
+
+    [SerializeField] private PawnRepository _pawnRepository;
     
     void Start()
     {
+        var pawns = _pawnRepository.GetPawns();
+        
         for (int i = 0; i < _gameSettingsSo.playerCount; i++)
         {
             var playerGameObject = Instantiate(_playerDataPlaceHolder, this.transform);
@@ -20,9 +20,9 @@ public class PlayersUI : MonoBehaviour
             
             var playerData = playerGameObject.GetComponent<PlayerData>();
             
-            _pawns[i].place = i;
+            pawns[i].place = i;
             
-            playerData.SetPlayer(_pawns[i]);
+            playerData.SetPlayer(pawns[i]);
             playerData.OnChangeName += delegate { Sort(this.transform); };
         }
     }

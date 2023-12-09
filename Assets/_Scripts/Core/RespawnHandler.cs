@@ -1,24 +1,26 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 public class RespawnHandler : MonoBehaviour
 {
-    [SerializeField] private List<Pawn> _pawns;
+    [SerializeField] private PawnRepository _pawnRepository;
     [SerializeField] private Map _map;
-
-    private void Awake()
+    
+    private void Start()
     {
-        foreach (var pawn in _pawns)
+        var pawns = _pawnRepository.GetPawns();
+        
+        foreach (var pawn in pawns)
         {
-            pawn.OnDeath += OnDeathHapped;
+            pawn.OnDeath += OnDeathHappened;
         }
     }
 
-    private void OnDeathHapped(Pawn pawn)
+    private void OnDeathHappened(Pawn pawn)
     {
+        Debug.Log($"On death happened {pawn.playerName} {pawn.health}");
         var nearestTile = GetNearestTile(pawn);
 
         StartCoroutine(MovePawnToRespawnTile(pawn, nearestTile));

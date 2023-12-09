@@ -111,12 +111,16 @@ public class Pawn : MonoBehaviour
         {
             health -= amount;
         }
+
+        damageReceived += amount;
         OnHealthChanged?.Invoke();
     }
 
     public void AddKeys(int amount)
     {
         keys += amount;
+        
+        keysGained += amount;
         OnKeysChanged?.Invoke();
     }
     
@@ -130,6 +134,8 @@ public class Pawn : MonoBehaviour
         {
             keys -= amount;
         }
+
+        keysLost += amount;
         OnKeysChanged?.Invoke();
     }
     
