@@ -87,7 +87,7 @@ public class GameLoop : MonoBehaviour
         {
             startTile.AddPawn(pawn);
             pawn.currentMapTile = startTile;
-            pawn.GetComponentInChildren<Transform>().position = pawn.currentMapTile.transform.position;
+            pawn.transform.position = pawn.currentMapTile.transform.position;
         }
 
         Debug.Log("All players were spawned!");

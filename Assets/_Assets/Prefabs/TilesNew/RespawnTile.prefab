@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5972325801736832898, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6995609539547846223, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -153,11 +157,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5745896613266025422, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4460598478116950404}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730908486702709472, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729758826087072289}
   m_SourcePrefab: {fileID: 100100000, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
 --- !u!4 &1439155799821262002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 773158740492271617, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
+  m_PrefabInstance: {fileID: 1820060441188883635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3063853834576750163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730908486702709472, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
+  m_PrefabInstance: {fileID: 1820060441188883635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729758826087072289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3063853834576750163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4865693c7bcd4d1bae1b0b4dd8e3e0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawnsOnTile: []
+  adjacentTiles: []
+  _vfx: {fileID: 5450430839372471089}
+--- !u!1 &5450430839372471089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5972325801736832898, guid: fff5272e0cc43e44ea98ec8017879d5a, type: 3}
   m_PrefabInstance: {fileID: 1820060441188883635}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6268907133247076221 stripped
