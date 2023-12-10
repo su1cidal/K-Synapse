@@ -12,16 +12,15 @@ public class TreasureTile : Tile
         
         ShowVFX();
         
-        yield return new WaitForSeconds(1f);
-        
         if (player.keys >= Constants.KEYS_TO_OPEN_TREASURE)
         {
+            yield return new WaitForSeconds(1f);
             yield return StartCoroutine(TreasureUI.Instance.Show(player));
         }
         else
         {
             Debug.Log("Pawn has not enough keys");
-            //todo Show NoKeys emote above player
+            StartCoroutine(player.ShowNoKeys());
         }
         
         HideVFX();

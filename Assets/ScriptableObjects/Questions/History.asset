@@ -27,12 +27,12 @@ MonoBehaviour:
     isSelected: 0
   - question: In which year did World War II end?
     answers:
+    - answer: 1948
+      isCorrect: 0
     - answer: 1943
       isCorrect: 0
     - answer: 1945
       isCorrect: 1
-    - answer: 1948
-      isCorrect: 0
     - answer: 1950
       isCorrect: 0
     isSelected: 0
@@ -62,11 +62,11 @@ MonoBehaviour:
     answers:
     - answer: Queen Elizabeth I
       isCorrect: 0
+    - answer: Queen Anne
+      isCorrect: 0
     - answer: Queen Victoria
       isCorrect: 1
     - answer: Queen Mary
-      isCorrect: 0
-    - answer: Queen Anne
       isCorrect: 0
     isSelected: 0
   - question: Who wrote "The Communist Manifesto" with Karl Marx?
@@ -93,46 +93,46 @@ MonoBehaviour:
     isSelected: 0
   - question: Who was the first emperor of China?
     answers:
-    - answer: Qin Shi Huang
-      isCorrect: 1
     - answer: Han Wudi
       isCorrect: 0
-    - answer: "Emperor Wu\t"
+    - answer: Emperor Wu
       isCorrect: 0
+    - answer: Qin Shi Huang
+      isCorrect: 1
     - answer: Ming Taizu
       isCorrect: 0
     isSelected: 0
   - question: Which treaty ended World War I?
     answers:
-    - answer: Treaty of Versailles
-      isCorrect: 1
-    - answer: Treaty of Brest-Litovsk
-      isCorrect: 0
     - answer: Treaty of Trianon
       isCorrect: 0
     - answer: Treaty of Saint-Germain-en-Laye
+      isCorrect: 0
+    - answer: Treaty of Versailles
+      isCorrect: 1
+    - answer: Treaty of Brest-Litovsk
       isCorrect: 0
     isSelected: 0
   - question: Who was the leader of the Civil Rights Movement in the 1960s?
     answers:
     - answer: Malcolm X
       isCorrect: 0
-    - answer: Rosa Parks
-      isCorrect: 0
     - answer: Martin Luther King Jr.
       isCorrect: 1
     - answer: Nelson Mandela
+      isCorrect: 0
+    - answer: Rosa Parks
       isCorrect: 0
     isSelected: 0
   - question: In what year did Christopher Columbus first reach the Americas?
     answers:
     - answer: 1492
       isCorrect: 1
-    - answer: 1521
+    - answer: 1776
       isCorrect: 0
     - answer: 1607
       isCorrect: 0
-    - answer: 1776
+    - answer: 1521
       isCorrect: 0
     isSelected: 0
   - question: Which ancient civilization is known for building the pyramids, including
@@ -149,14 +149,14 @@ MonoBehaviour:
     isSelected: 0
   - question: What event marked the beginning of World War I in 1914?
     answers:
-    - answer: Assassination of Archduke Franz Ferdinand
-      isCorrect: 1
     - answer: Invasion of Poland
       isCorrect: 0
     - answer: Treaty of Versailles
       isCorrect: 0
     - answer: Battle of Stalingrad
       isCorrect: 0
+    - answer: Assassination of Archduke Franz Ferdinand
+      isCorrect: 1
     isSelected: 0
   - question: Who was the famous queen of ancient Egypt known for her relationship
       with Julius Caesar and Mark Antony?
@@ -173,14 +173,14 @@ MonoBehaviour:
   - question: In which year did the Berlin Wall fall, symbolizing the end of the
       Cold War?
     answers:
+    - answer: 1995
+      isCorrect: 0
+    - answer: 1991
+      isCorrect: 0
     - answer: 1985
       isCorrect: 0
     - answer: 1989
       isCorrect: 1
-    - answer: 1991
-      isCorrect: 0
-    - answer: 1995
-      isCorrect: 0
     isSelected: 0
   - question: What was the purpose of the Lewis and Clark Expedition in the early
       19th century?
@@ -209,12 +209,12 @@ MonoBehaviour:
     answers:
     - answer: Nelson Mandela's release from prison
       isCorrect: 0
-    - answer: The Sharpeville Massacre
-      isCorrect: 1
     - answer: The Soweto Uprising
       isCorrect: 0
     - answer: The Rivonia Trial
       isCorrect: 0
+    - answer: The Sharpeville Massacre
+      isCorrect: 1
     isSelected: 0
   - question: Who is credited with inventing the World Wide Web in 1989?
     answers:
@@ -232,21 +232,21 @@ MonoBehaviour:
     answers:
     - answer: Union victory
       isCorrect: 1
+    - answer: End of the war
+      isCorrect: 0
     - answer: Confederate victory
       isCorrect: 0
     - answer: Treaty negotiation
       isCorrect: 0
-    - answer: End of the war
-      isCorrect: 0
     isSelected: 0
   - question: In what year did the Treaty of Versailles end World War I?
     answers:
-    - answer: 1917
+    - answer: 1920
       isCorrect: 0
     - answer: 1918
       isCorrect: 0
     - answer: 1919
       isCorrect: 1
-    - answer: 1920
+    - answer: 1917
       isCorrect: 0
     isSelected: 0

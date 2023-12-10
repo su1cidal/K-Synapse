@@ -35,6 +35,7 @@ public class GameLoop : MonoBehaviour
     
     private List<Pawn> _pawns;
     private int _turnCount = 0;
+    private Camera _mainCamera;
     
     private const string MAIN_MENU_SCENE_NAME = "MainMenu";
     
@@ -56,6 +57,8 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
+        _mainCamera = Camera.main;
+        
         SwitchGameState(GameState.SpawnPlayers);
     }
 
@@ -92,14 +95,11 @@ public class GameLoop : MonoBehaviour
         SwitchGameState(GameState.RollADice);
     }
 
-    private void RollADice()
+    private IEnumerator RollADices()
     {
-        if (_pawns.Count >= 1)
+        foreach (var pawn in _pawns)
         {
-            foreach (var pawn in _pawns)
-            {
-                pawn.RollADice();
-            }
+            yield return StartCoroutine(pawn.RollADice());
         }
 
         Debug.Log("All players rolled a dice!");
@@ -129,23 +129,23 @@ public class GameLoop : MonoBehaviour
         switch (_gameState)
         {
             case GameState.SpawnPlayers:
-                Debug.Log("Entered state SpawnPlayers");
+                Debug.Log("Entered state SpawnPlayers\n");
                 SpawnPawns();
                 break;
             case GameState.RollADice:
-                Debug.Log("Entered state RollADice");
-                RollADice();
+                Debug.Log("Entered state RollADice\n");
+                StartCoroutine(RollADices());
                 break;
             case GameState.SortMoveOrder:
-                Debug.Log("Entered state SortMoveOrder");
+                Debug.Log("Entered state SortMoveOrder\n");
                 SortMoveOrder();
                 break;
             case GameState.DoMoves:
-                Debug.Log("Entered state DoMoves");
+                Debug.Log("Entered state DoMoves\n");
                 StartCoroutine(MovePawns());
                 break;
             case GameState.IsEnd:
-                Debug.Log("Entered state IsEnd");
+                Debug.Log("Entered state IsEnd\n");
                 if (!CheckIsEnd())
                     SwitchGameState(GameState.RollADice);
                 else
@@ -158,7 +158,7 @@ public class GameLoop : MonoBehaviour
 
     private void GoToMainMenu()
     {
-        Camera.main.gameObject.SetActive(true);
+        _mainCamera.gameObject.SetActive(true);
         _topRightUI.SetActive(true);
         _topLeftUI.SetActive(true);
         
@@ -173,7 +173,7 @@ public class GameLoop : MonoBehaviour
     {
         _topLeftUI.SetActive(false);
         _topRightUI.SetActive(false);
-        Camera.main.gameObject.SetActive(false);
+        _mainCamera.gameObject.SetActive(false);
         
         _endGameScene.SetActive(true);
         _scoreboardUI.Show();
@@ -181,37 +181,37 @@ public class GameLoop : MonoBehaviour
 
         foreach (var pawn in _pawnRepository.GetPawns())
         {
+            if (pawn.place == _gameSettingsSO.playerCount)
+            {
+                pawn.transform.parent = _lastPlace.transform;
+                ZeroPawnPosition(pawn);
+            }
+            
             if (pawn.place == 1)
             {
-                pawn.transform.position = _firstPlace.transform.position;
-                ZeroPawnZ(pawn);
+                pawn.transform.parent = _firstPlace.transform;
+                ZeroPawnPosition(pawn);
             }
 
             if (pawn.place == 2)
             {
-                pawn.transform.position = _secondPlace.transform.position;
-                ZeroPawnZ(pawn);
+                pawn.transform.parent = _secondPlace.transform;
+                ZeroPawnPosition(pawn);
             }
 
             if (pawn.place == 3)
             {
-                pawn.transform.position = _thirdPlace.transform.position;
-                ZeroPawnZ(pawn);
-            }
-
-            if (pawn.place == _gameSettingsSO.playerCount)
-            {
-                pawn.transform.position = _lastPlace.transform.position;
-                ZeroPawnZ(pawn);
+                pawn.transform.parent = _thirdPlace.transform;
+                ZeroPawnPosition(pawn);
             }
         }
     }
 
-    private void ZeroPawnZ(Pawn pawn)
+    private void ZeroPawnPosition(Pawn pawn)
     {
-        var position = pawn.transform.position;
-        position.z = 0;
-        pawn.transform.position = position;
+        Vector3 newVector = new Vector3(0,0,0);
+        pawn.visual.transform.localPosition = newVector;
+        pawn.transform.localPosition = newVector;
     }
     
     private bool CheckIsEnd()

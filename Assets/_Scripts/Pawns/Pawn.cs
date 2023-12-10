@@ -25,6 +25,8 @@ public class Pawn : MonoBehaviour
     [SerializeField] public GameObject visual;
     [SerializeField] public GameObject model;
     [SerializeField] public PlayerMaterialsSO materials;
+    [SerializeField] private Dice _dice;
+    [SerializeField] private GameObject _noKeys;
     
     [SerializeField] private bool _isPlayer = false;
     
@@ -36,6 +38,7 @@ public class Pawn : MonoBehaviour
     public event Action<Pawn> OnDeath;
     public event Action OnKeysChanged;
     public event Action OnCupsChanged;
+    public event Action OnJump;
 
     public Pawn(string playerName, PlayerMaterialsSO materials, bool isPlayer)
     {
@@ -54,6 +57,18 @@ public class Pawn : MonoBehaviour
         }
     }
 
+    public IEnumerator ShowNoKeys()
+    {
+        _noKeys.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        _noKeys.SetActive(false);
+    }
+    
+    public IEnumerator RollADice()
+    {
+        yield return StartCoroutine(_dice.Roll(this));
+    }
+    
     public Material GetMaterialUI()
     {
         if (materials.PlayerAnswer == null)
@@ -67,6 +82,11 @@ public class Pawn : MonoBehaviour
     public bool IsWalking()
     {
         return _isWalking;
+    }
+
+    public void MakeJump()
+    {
+        OnJump?.Invoke();
     }
 
     public bool IsPlayer => _isPlayer;
@@ -156,19 +176,6 @@ public class Pawn : MonoBehaviour
             cups -= amount;
         }
         OnCupsChanged?.Invoke();
-    }
-
-    public int RollADice() //todo export to personal class
-    {
-        rolledDice = Random.Range(Constants.ROLL_MIN_VALUE, Constants.ROLL_MAX_VALUE + 1);
-        return rolledDice;
-    }
-
-    private IEnumerator ShowRolledDice()
-    {
-        //todo realise it
-
-        yield return new WaitForSeconds(1f);
     }
 
     public void FixPosition()
