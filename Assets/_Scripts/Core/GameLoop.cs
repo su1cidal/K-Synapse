@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,6 +20,9 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private TurnCountUI _turnCountUI;
     [SerializeField] private TurnOrderUI _turnOrderUI;
     [SerializeField] private ScoreboardUI _scoreboardUI;
+    [SerializeField] private GameObject _playerTurn;
+    [SerializeField] private GameObject _inputGuide;
+    [SerializeField] private TMP_Text _playerTurnText;
     [SerializeField] private Map _map;
     [SerializeField] private GameState _gameState;
     [SerializeField] private int _timeScale = 1;
@@ -111,6 +115,7 @@ public class GameLoop : MonoBehaviour
     {
         foreach (var pawn in _pawns)
         {
+            StartCoroutine(ShowPlayerTurnText(pawn));
             yield return StartCoroutine(_pawnMover.MoveByPath(pawn));
         }
 
@@ -120,6 +125,15 @@ public class GameLoop : MonoBehaviour
         _turnCountUI.SetTurnCount(_turnCount, _gameSettingsSO.turnCount);
         
         SwitchGameState(GameState.IsEnd);
+    }
+
+    private IEnumerator ShowPlayerTurnText(Pawn pawn)
+    {
+        _playerTurnText.color = pawn.materials.PlayerColor.color;
+        _playerTurnText.text = pawn.playerName + " TURN!";
+        _playerTurn.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        _playerTurn.SetActive(false);
     }
 
     private void SwitchGameState(GameState gameState)
@@ -149,7 +163,7 @@ public class GameLoop : MonoBehaviour
                 if (!CheckIsEnd())
                     SwitchGameState(GameState.RollADice);
                 else
-                    EndGame();
+                    StartCoroutine(EndGame());
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -169,10 +183,12 @@ public class GameLoop : MonoBehaviour
         SceneManager.LoadScene(MAIN_MENU_SCENE_NAME, LoadSceneMode.Single);
     }
     
-    private void EndGame()
+    private IEnumerator EndGame()
     {
+        yield return new WaitForSeconds(5f);
         _topLeftUI.SetActive(false);
         _topRightUI.SetActive(false);
+        _inputGuide.SetActive(false);
         _mainCamera.gameObject.SetActive(false);
         
         _endGameScene.SetActive(true);

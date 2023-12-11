@@ -25,6 +25,7 @@ public class Dice : MonoBehaviour
     private bool IsWaitingForInput() => _isWaitingForInput;
 
     public static event EventHandler OnConfetti;
+    public static event EventHandler OnDiceHit;
     
     private void Update()
     {
@@ -82,14 +83,15 @@ public class Dice : MonoBehaviour
     private IEnumerator ShowNumber(int value, Pawn pawn)
     {
         if(pawn.IsPlayer)
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         else 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         
         _dice.SetActive(false);
 
         _numberText.text = value.ToString();
-        
+        OnDiceHit?.Invoke(this, EventArgs.Empty);
+        yield return new WaitForSeconds(0.2f);
         _number.SetActive(true);
         _vfx.SetActive(true);
         OnConfetti?.Invoke(this, EventArgs.Empty);

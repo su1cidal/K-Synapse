@@ -23,18 +23,39 @@ public class SoundManager : MonoBehaviour
         RespawnTile.OnRespawn += RespawnTile_OnRespawn;
         KeyTile.OnAddKeys += KeyTile_OnAddKeys;
         HealingTile.OnHeal += HealingTile_OnHeal;
+        QuestionTile.OnQuizStart += QuestionTile_OnQuizStart;
         
         Pawn.OnCorrectAnswered += Pawn_OnCorrectAnswered;
         Pawn.OnWrongAnswered += Pawn_OnWrongAnswered;
-        Pawn.OnDiceRoll += Pawn_OnDiceRoll;
+        //Pawn.OnDiceRoll += Pawn_OnDiceRoll;
+        Pawn.OnDeathGlobal += Pawn_OnDeathGlobal;
         
         Dice.OnConfetti += Dice_OnConfetti;
+        Dice.OnDiceHit += Dice_OnDiceHit;
         // DeliveryManager.Instance.OnRecipeSuccess += DeliveryManager_OnRecipeSuccess;
         // DeliveryManager.Instance.OnRecipeFailed += DeliveryManager_OnRecipeFailed;
         // CuttingCounter.OnAnyCut += CuttingCounter_OnAnyCut;
         // Player.Instance.OnPickedSomething += Player_OnPickedSomething;
         // BaseCounter.OnAnyObjectPlaced += BaseCounter_OnAnyObjectPlaced;
         // TrashCounter.OnAnyObjectTrashed += TrashCounter_OnAnyObjectTrashed;
+    }
+
+    private void QuestionTile_OnQuizStart(object sender, EventArgs e)
+    {
+        QuestionTile questionTile = sender as QuestionTile;
+        PlaySound(_audioClipRefsSO.quizStart, questionTile.transform.position);
+    }
+
+    private void Pawn_OnDeathGlobal(object sender, EventArgs e)
+    {
+        Pawn pawn = sender as Pawn;
+        PlaySound(_audioClipRefsSO.death, pawn.transform.position);
+    }
+
+    private void Dice_OnDiceHit(object sender, EventArgs e)
+    {
+        Dice dice = sender as Dice;
+        PlaySound(_audioClipRefsSO.diceRollHit, dice.transform.position, 0.15f);
     }
 
     private void Dice_OnConfetti(object sender, EventArgs e)
@@ -46,7 +67,7 @@ public class SoundManager : MonoBehaviour
     private void Pawn_OnDiceRoll(object sender, EventArgs e)
     {
         Pawn pawn = sender as Pawn;
-        PlaySound(_audioClipRefsSO.diceRollHit, pawn.transform.position);
+        PlaySound(_audioClipRefsSO.diceRollHit, pawn.transform.position, 0.5f);
     }
 
     private void HealingTile_OnHeal(object sender, EventArgs e)

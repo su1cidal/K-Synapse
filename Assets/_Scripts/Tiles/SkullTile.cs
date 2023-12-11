@@ -13,7 +13,7 @@ public class SkullTile : Tile
         OnSkullTileDamage?.Invoke(this, EventArgs.Empty);
         player.DoDamage(Constants.TILE_DO_DAMAGE);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
         HideVFX();
     }
 }

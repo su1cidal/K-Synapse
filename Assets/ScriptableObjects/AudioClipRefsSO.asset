@@ -13,27 +13,37 @@ MonoBehaviour:
   m_Name: AudioClipRefsSO
   m_EditorClassIdentifier: 
   questionFail:
-  - {fileID: 8300000, guid: 531d6c071f50a5047b41825e891b2e69, type: 3}
+  - {fileID: 8300000, guid: 38c25fb9a4754194f86d0f20155ec902, type: 3}
   questionSuccess:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 4fcd62e536bd44f40add7f372d4649ac, type: 3}
   footstep:
   - {fileID: 8300000, guid: 59837ace7e53efb469165242fe900351, type: 3}
   - {fileID: 8300000, guid: cb7c36906edb7b647973b839fc4b42ba, type: 3}
+  death:
+  - {fileID: 8300000, guid: 68e9e24be7b197b4dbc4c73238e2c49f, type: 3}
   treasureOpen:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 2b459589007156746a30bea9f5d27976, type: 3}
   treasureIgnore:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: a574be81f8628b145afd078c62efd66e, type: 3}
   treasureNotEnoughKeys:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: b6463528b6bd5254c87936e821072ed7, type: 3}
   skullTileDamage:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: d524d5b4169a48c4e831fd50a7e590df, type: 3}
   respawnTileRespawn:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 703524a383abf8d489fa87c88e6cb33e, type: 3}
   keyTileAddKeys:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 0caa0fc6822bcd8458e1b40b3de50cfa, type: 3}
+  - {fileID: 8300000, guid: 998e8ad358717924ab8cb79dc4f61543, type: 3}
+  - {fileID: 8300000, guid: ce871609862aa2b4f984bdd051c35614, type: 3}
+  - {fileID: 8300000, guid: 81d9d5cb264f119459d15beec0f29be1, type: 3}
+  - {fileID: 8300000, guid: 4f42abf4fc81c624fb637e2225038a5d, type: 3}
+  - {fileID: 8300000, guid: dddd1c315a6d049479c3041984d3ec37, type: 3}
+  - {fileID: 8300000, guid: 6a51ca85adae2aa4d8a0d53fc6e9915d, type: 3}
   healingTileOnHeal:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: e9a44fa26fdf97b4f90eccbdb96c323a, type: 3}
+  quizStart:
+  - {fileID: 8300000, guid: c378a1898ba11bc49a49e77d1ab47619, type: 3}
   diceRollHit:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: 68c57e670419cff4db4471d45e47d94c, type: 3}
   confetti:
-  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  - {fileID: 8300000, guid: a1efc9daefe3cd6449fe0d3450648d25, type: 3}

@@ -20,14 +20,14 @@ public class TreasureTile : Tile
         
         if (player.keys >= Constants.KEYS_TO_OPEN_TREASURE)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
             yield return StartCoroutine(TreasureUI.Instance.Show(player));
         }
         else
         {
             OnTreasureNotEnoughKeys?.Invoke(this, EventArgs.Empty);
             Debug.Log("Pawn has not enough keys");
-            StartCoroutine(player.ShowNoKeys());
+            yield return StartCoroutine(player.ShowNoKeys());
         }
         
         HideVFX();
@@ -46,6 +46,7 @@ public class TreasureTile : Tile
     
     private IEnumerator LaunchConfetti()
     {
+        yield return new WaitForSeconds(2f);
         _confetti.SetActive(true);
         OnConfetti?.Invoke(this, EventArgs.Empty);
         yield return new WaitForSeconds(5f);

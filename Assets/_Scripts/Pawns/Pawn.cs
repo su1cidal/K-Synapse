@@ -42,6 +42,7 @@ public class Pawn : MonoBehaviour
     public static event EventHandler OnCorrectAnswered;
     public static event EventHandler OnWrongAnswered;
     public static event EventHandler OnDiceRoll;
+    public static event EventHandler OnDeathGlobal;
 
     public Pawn(string playerName, PlayerMaterialsSO materials, bool isPlayer)
     {
@@ -129,6 +130,7 @@ public class Pawn : MonoBehaviour
         if (health - amount <= Constants.PLAYER_MIN_HEALTH)
         {
             health = (int)Constants.PLAYER_MIN_HEALTH;
+            OnDeathGlobal?.Invoke(this, EventArgs.Empty);
             OnDeath?.Invoke(this);
         }
         else
