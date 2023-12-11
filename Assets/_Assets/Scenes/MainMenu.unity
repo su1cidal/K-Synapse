@@ -975,7 +975,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5895357796431107987, guid: c745c43e1add0394daba37b23ccd183e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2515742783751367852, guid: c745c43e1add0394daba37b23ccd183e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3154,7 +3159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &318321046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,6 +4049,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1087276622}
     m_Modifications:
+    - target: {fileID: 986002199058291194, guid: 349091e82dfd7984aad1135a8b44909c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7447823259487852018, guid: 349091e82dfd7984aad1135a8b44909c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1052084
@@ -4088,7 +4097,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthTile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6879624126138828438, guid: 349091e82dfd7984aad1135a8b44909c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7780,15 +7790,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2354421537211927772, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.285
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 2354421537211927772, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.846
+      value: -0.824
       objectReference: {fileID: 0}
     - target: {fileID: 2354421537211927772, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.474
+      value: 7.462
       objectReference: {fileID: 0}
     - target: {fileID: 2354421537211927772, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7822,7 +7832,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreasureTile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5357478038290170068, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270670730560924824, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.008
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -7246473991860052780, guid: b37104bbc86297949a51dd198a7cb96c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8782,7 +8801,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyTile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6852753927374026623, guid: 8ca37dab5ba92d842b6724acda8b530f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8252511888038699875, guid: 8ca37dab5ba92d842b6724acda8b530f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8839,7 +8863,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5182073342208356755, guid: 144b95b8b07da1a4da1dca16b2b8a886, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8983324444919837046, guid: 144b95b8b07da1a4da1dca16b2b8a886, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9041,7 +9070,7 @@ Transform:
   m_GameObject: {fileID: 1087276621}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2962085, y: 1.5959475, z: -9.513615}
+  m_LocalPosition: {x: 1.2962085, y: 1.785948, z: -9.513615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10649,7 +10678,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: RespawnTile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5450430839372471089, guid: 03fe832b39182fc4589f5fc360bd1e87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 729758826087072289, guid: 03fe832b39182fc4589f5fc360bd1e87, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15799,6 +15833,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1087276622}
     m_Modifications:
+    - target: {fileID: 1063272697736750116, guid: 8c102b1475b77c44992d43663ac0d426, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7220537868224931884, guid: 8c102b1475b77c44992d43663ac0d426, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.689
@@ -15843,7 +15881,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartTile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4163260192767908776, guid: 8c102b1475b77c44992d43663ac0d426, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16243,7 +16282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577902099451667680, guid: 4595131528c96aa4db1d0164937abfa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6059475
+      value: -0.739
       objectReference: {fileID: 0}
     - target: {fileID: 1577902099451667680, guid: 4595131528c96aa4db1d0164937abfa3, type: 3}
       propertyPath: m_LocalPosition.z

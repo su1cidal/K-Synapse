@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class Pawn : MonoBehaviour
 {
@@ -39,6 +38,10 @@ public class Pawn : MonoBehaviour
     public event Action OnKeysChanged;
     public event Action OnCupsChanged;
     public event Action OnJump;
+    
+    public static event EventHandler OnCorrectAnswered;
+    public static event EventHandler OnWrongAnswered;
+    public static event EventHandler OnDiceRoll;
 
     public Pawn(string playerName, PlayerMaterialsSO materials, bool isPlayer)
     {
@@ -87,6 +90,7 @@ public class Pawn : MonoBehaviour
     public void MakeJump()
     {
         OnJump?.Invoke();
+        OnDiceRoll?.Invoke(this, EventArgs.Empty);
     }
 
     public bool IsPlayer => _isPlayer;
@@ -178,6 +182,20 @@ public class Pawn : MonoBehaviour
         OnCupsChanged?.Invoke();
     }
 
+    public void AddCorrectAnswer(Question question)
+    {
+        correctAnswered.Add(question);
+        if(_isPlayer) 
+            OnCorrectAnswered?.Invoke(this, EventArgs.Empty);
+    }
+    
+    public void AddWrongAnswer(Question question)
+    {
+        wrongAnswered.Add(question);
+        if(_isPlayer) 
+            OnWrongAnswered?.Invoke(this, EventArgs.Empty);
+    }
+    
     public void FixPosition()
     {
         var resetVector = new Vector3(0,0,0);

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SoundManager : MonoBehaviour
 {
@@ -13,6 +15,20 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        TreasureTile.OnTreasureOpen += TreasureTile_OnTreasureOpen;
+        TreasureTile.OnTreasureIgnore += TreasureTile_OnTreasureIgnore;
+        TreasureTile.OnTreasureNotEnoughKeys += TreasureTile_OnTreasureNotEnoughKeys;
+        TreasureTile.OnConfetti += TreasureTile_OnConfetti;
+        SkullTile.OnSkullTileDamage += SkullTile_OnSkullTileDamage;
+        RespawnTile.OnRespawn += RespawnTile_OnRespawn;
+        KeyTile.OnAddKeys += KeyTile_OnAddKeys;
+        HealingTile.OnHeal += HealingTile_OnHeal;
+        
+        Pawn.OnCorrectAnswered += Pawn_OnCorrectAnswered;
+        Pawn.OnWrongAnswered += Pawn_OnWrongAnswered;
+        Pawn.OnDiceRoll += Pawn_OnDiceRoll;
+        
+        Dice.OnConfetti += Dice_OnConfetti;
         // DeliveryManager.Instance.OnRecipeSuccess += DeliveryManager_OnRecipeSuccess;
         // DeliveryManager.Instance.OnRecipeFailed += DeliveryManager_OnRecipeFailed;
         // CuttingCounter.OnAnyCut += CuttingCounter_OnAnyCut;
@@ -21,40 +37,77 @@ public class SoundManager : MonoBehaviour
         // TrashCounter.OnAnyObjectTrashed += TrashCounter_OnAnyObjectTrashed;
     }
 
-    // private void TrashCounter_OnAnyObjectTrashed(object sender, System.EventArgs e)
-    // {
-    //     TrashCounter trashCounter = sender as TrashCounter;
-    //     PlaySound(_audioClipRefsSO.trash, trashCounter.transform.position);
-    // }
-    //
-    // private void BaseCounter_OnAnyObjectPlaced(object sender, System.EventArgs e)
-    // {
-    //     BaseCounter baseCounter = sender as BaseCounter;
-    //     PlaySound(_audioClipRefsSO.objectDrop, baseCounter.transform.position);
-    // }
-    //
-    // private void Player_OnPickedSomething(object sender, System.EventArgs e)
-    // {
-    //     PlaySound(_audioClipRefsSO.objectPickup, Player.Instance.transform.position);
-    // }
-    //
-    // private void CuttingCounter_OnAnyCut(object sender, System.EventArgs e)
-    // {
-    //     CuttingCounter cuttingCounter = sender as CuttingCounter;
-    //     PlaySound(_audioClipRefsSO.chop, cuttingCounter.transform.position);
-    // }
-    //
-    // private void DeliveryManager_OnRecipeFailed(object sender, System.EventArgs e)
-    // {
-    //     DeliveryCounter deliveryCounter = DeliveryCounter.Instance;
-    //     PlaySound(_audioClipRefsSO.deliveryFail, deliveryCounter.transform.position);
-    // }
-    //
-    // private void DeliveryManager_OnRecipeSuccess(object sender, System.EventArgs e)
-    // {
-    //     DeliveryCounter deliveryCounter = DeliveryCounter.Instance;
-    //     PlaySound(_audioClipRefsSO.deliverySuccess, deliveryCounter.transform.position);
-    // }
+    private void Dice_OnConfetti(object sender, EventArgs e)
+    {
+        Dice dice = sender as Dice;
+        PlaySound(_audioClipRefsSO.confetti, dice.transform.position);
+    }
+
+    private void Pawn_OnDiceRoll(object sender, EventArgs e)
+    {
+        Pawn pawn = sender as Pawn;
+        PlaySound(_audioClipRefsSO.diceRollHit, pawn.transform.position);
+    }
+
+    private void HealingTile_OnHeal(object sender, EventArgs e)
+    {
+        HealingTile healingTile = sender as HealingTile;
+        PlaySound(_audioClipRefsSO.healingTileOnHeal, healingTile.transform.position);
+    }
+
+    private void KeyTile_OnAddKeys(object sender, EventArgs e)
+    {
+        KeyTile keyTile = sender as KeyTile;
+        PlaySound(_audioClipRefsSO.keyTileAddKeys, keyTile.transform.position);
+    }
+
+    private void RespawnTile_OnRespawn(object sender, EventArgs e)
+    {
+        RespawnTile respawnTile = sender as RespawnTile;
+        PlaySound(_audioClipRefsSO.respawnTileRespawn, respawnTile.transform.position);
+    }
+
+    private void SkullTile_OnSkullTileDamage(object sender, EventArgs e)
+    {
+        SkullTile skullTile = sender as SkullTile;
+        PlaySound(_audioClipRefsSO.skullTileDamage, skullTile.transform.position);
+    }
+
+    private void Pawn_OnCorrectAnswered(object sender, EventArgs e)
+    {
+        Pawn pawn = sender as Pawn;
+        PlaySound(_audioClipRefsSO.questionSuccess, pawn.transform.position);
+    }
+
+    private void Pawn_OnWrongAnswered(object sender, EventArgs e)
+    {
+        Pawn pawn = sender as Pawn;
+        PlaySound(_audioClipRefsSO.questionFail, pawn.transform.position);
+    }
+    
+    private void TreasureTile_OnConfetti(object sender, EventArgs e)
+    {
+        TreasureTile treasureTile = sender as TreasureTile;
+        PlaySound(_audioClipRefsSO.confetti, treasureTile.transform.position);
+    }
+    
+    private void TreasureTile_OnTreasureNotEnoughKeys(object sender, EventArgs e)
+    {
+        TreasureTile treasureTile = sender as TreasureTile;
+        PlaySound(_audioClipRefsSO.treasureNotEnoughKeys, treasureTile.transform.position);
+    }
+    
+    private void TreasureTile_OnTreasureIgnore(object sender, EventArgs e)
+    {
+        TreasureTile treasureTile = sender as TreasureTile;
+        PlaySound(_audioClipRefsSO.treasureIgnore, treasureTile.transform.position);
+    }
+    
+    private void TreasureTile_OnTreasureOpen(object sender, System.EventArgs e)
+    {
+        TreasureTile treasureTile = sender as TreasureTile;
+        PlaySound(_audioClipRefsSO.treasureOpen, treasureTile.transform.position);
+    }
 
     private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f)
     {
@@ -66,7 +119,7 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(audioClip, position, volume);
     }
 
-    public void PlayFootsetpsSound(Vector3 position, float volume)
+    public void PlayFootstepsSound(Vector3 position, float volume)
     {
         PlaySound(_audioClipRefsSO.footstep, position, volume);
     }

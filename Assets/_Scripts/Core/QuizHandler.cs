@@ -87,9 +87,9 @@ public class QuizHandler : MonoBehaviour
         _quizUI.DisableButtons();
         
         var indices = GetCorrectAnswersIndices();
-        yield return StartCoroutine(_quizUI.ShowCorrectAnswers(indices));
+        StartCoroutine(_quizUI.ShowCorrectAnswers(indices));
         
-        ProceedQuizResults(indices);
+        yield return StartCoroutine(ProceedQuizResults(indices));
         
         _quizUI.Hide();
         ClearPawnIsAnswered();
@@ -98,7 +98,7 @@ public class QuizHandler : MonoBehaviour
         _isQuizEnded = true;
     }
 
-    private void ProceedQuizResults(List<int> indices)
+    private IEnumerator ProceedQuizResults(List<int> indices)
     {
         var wrongPlayers = _pawnRepository.GetPawns().ToList();
 
@@ -109,7 +109,7 @@ public class QuizHandler : MonoBehaviour
             foreach (var player in correctPlayers)
             {
                 player.AddKeys(Constants.KEYS_TO_ADD_AFTER_CORRECT_ANSWER);
-                player.correctAnswered.Add(_currentQuestion);
+                player.AddCorrectAnswer(_currentQuestion);
                 wrongPlayers.Remove(player);
             }
         }
@@ -117,8 +117,9 @@ public class QuizHandler : MonoBehaviour
         foreach (var player in wrongPlayers)
         {
             player.RemoveKeys(Constants.KEYS_TO_REMOVE_AFTER_CORRECT_ANSWER);
-            player.wrongAnswered.Add(_currentQuestion);
+            player.AddWrongAnswer(_currentQuestion);
         }
+        yield return new WaitForSeconds(3f);
     }
 
     private void ClearPreviousAnswers()

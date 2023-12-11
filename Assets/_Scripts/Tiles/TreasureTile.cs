@@ -6,9 +6,15 @@ public class TreasureTile : Tile
 {
     [SerializeField] private GameObject _confetti;
 
+    public static event EventHandler OnTreasureOpen;
+    public static event EventHandler OnTreasureIgnore;
+    public static event EventHandler OnTreasureNotEnoughKeys;
+    public static event EventHandler OnConfetti;
+    
     public override IEnumerator DoAction(Pawn player)
     {
         TreasureUI.Instance.OnOpenPressed += Launch;
+        TreasureUI.Instance.OnIgnorePressed += Ignore;
         
         ShowVFX();
         
@@ -19,6 +25,7 @@ public class TreasureTile : Tile
         }
         else
         {
+            OnTreasureNotEnoughKeys?.Invoke(this, EventArgs.Empty);
             Debug.Log("Pawn has not enough keys");
             StartCoroutine(player.ShowNoKeys());
         }
@@ -28,12 +35,19 @@ public class TreasureTile : Tile
 
     private void Launch()
     {
+        OnTreasureOpen?.Invoke(this, EventArgs.Empty);
         StartCoroutine(LaunchConfetti());
+    }
+    
+    private void Ignore()
+    {
+        OnTreasureIgnore?.Invoke(this, EventArgs.Empty);
     }
     
     private IEnumerator LaunchConfetti()
     {
         _confetti.SetActive(true);
+        OnConfetti?.Invoke(this, EventArgs.Empty);
         yield return new WaitForSeconds(5f);
         ResetConfetti();
     }
@@ -43,5 +57,6 @@ public class TreasureTile : Tile
         _confetti.SetActive(false);
         
         TreasureUI.Instance.OnOpenPressed -= Launch;
+        TreasureUI.Instance.OnIgnorePressed -= Launch;
     }
 }

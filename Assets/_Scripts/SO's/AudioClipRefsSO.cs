@@ -4,7 +4,22 @@ using UnityEngine;
 public class AudioClipRefsSO : ScriptableObject
 {
     public AudioClip[] questionFail;
-    public AudioClip[] questionsSuccess;
+    public AudioClip[] questionSuccess;
     public AudioClip[] footstep;
-    public AudioClip[] warning;
+    
+    public AudioClip[] treasureOpen;
+    public AudioClip[] treasureIgnore;
+    public AudioClip[] treasureNotEnoughKeys;
+    
+    public AudioClip[] skullTileDamage;
+    
+    public AudioClip[] respawnTileRespawn;
+    
+    public AudioClip[] keyTileAddKeys;
+    
+    public AudioClip[] healingTileOnHeal;
+    
+    public AudioClip[] diceRollHit;
+    
+    public AudioClip[] confetti;
 }

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PawnSounds : MonoBehaviour
 {
-    [SerializeField] private float volume = 0.5f;
-    [SerializeField] private float _footstepTimerMax = 0.1f;
+    [SerializeField] private float _volume = 0.7f;
+    [SerializeField] private float _footstepTimerMax = 0.605f;
     private Pawn _pawn;
     private float _footstepTimer;
 
@@ -20,7 +20,7 @@ public class PawnSounds : MonoBehaviour
             _footstepTimer = _footstepTimerMax;
             if (_pawn.IsWalking())
             {
-                SoundManager.Instance.PlayFootsetpsSound(_pawn.transform.position, volume);
+                SoundManager.Instance.PlayFootstepsSound(_pawn.transform.position, _volume);
             }
         }
     }

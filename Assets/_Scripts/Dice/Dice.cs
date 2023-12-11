@@ -24,7 +24,7 @@ public class Dice : MonoBehaviour
     private bool IsStopPressed() => _isStopPressed;
     private bool IsWaitingForInput() => _isWaitingForInput;
 
-    public event Action OnStopPressed;
+    public static event EventHandler OnConfetti;
     
     private void Update()
     {
@@ -32,7 +32,6 @@ public class Dice : MonoBehaviour
         {
             _isStopPressed = true;
             
-            OnStopPressed?.Invoke();
             _isWaitingForInput = false;
         }
 
@@ -71,7 +70,6 @@ public class Dice : MonoBehaviour
     {
         _isStopPressed = true;
 
-        OnStopPressed?.Invoke();
         _isWaitingForInput = false;
     }
 
@@ -94,6 +92,7 @@ public class Dice : MonoBehaviour
         
         _number.SetActive(true);
         _vfx.SetActive(true);
+        OnConfetti?.Invoke(this, EventArgs.Empty);
         _isEnded = true;
         
         

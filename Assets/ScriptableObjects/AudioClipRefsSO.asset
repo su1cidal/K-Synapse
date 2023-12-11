@@ -14,13 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionFail:
   - {fileID: 8300000, guid: 531d6c071f50a5047b41825e891b2e69, type: 3}
-  - {fileID: 8300000, guid: 6ed4e9c7fef93d0449da9a54bf57aca7, type: 3}
-  questionsSuccess:
-  - {fileID: 8300000, guid: 7f0eaf762f8625340b7652d2e467e73c, type: 3}
-  - {fileID: 8300000, guid: 7fcd62ee999b26a4483a44390ccd9615, type: 3}
+  questionSuccess:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
   footstep:
   - {fileID: 8300000, guid: 59837ace7e53efb469165242fe900351, type: 3}
   - {fileID: 8300000, guid: cb7c36906edb7b647973b839fc4b42ba, type: 3}
-  warning:
+  treasureOpen:
   - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
-  - {fileID: 8300000, guid: 82c2fc9f12de0cf4a8cd347dcfcfd68a, type: 3}
+  treasureIgnore:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  treasureNotEnoughKeys:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  skullTileDamage:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  respawnTileRespawn:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  keyTileAddKeys:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  healingTileOnHeal:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  diceRollHit:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
+  confetti:
+  - {fileID: 8300000, guid: e5736ca8f622e7449b081bda5bf5ee10, type: 3}
