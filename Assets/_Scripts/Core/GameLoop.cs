@@ -185,7 +185,7 @@ public class GameLoop : MonoBehaviour
     
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         _topLeftUI.SetActive(false);
         _topRightUI.SetActive(false);
         _inputGuide.SetActive(false);

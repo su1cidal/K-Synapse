@@ -22741,6 +22741,7 @@ MonoBehaviour:
   _scoreboardUI: {fileID: 1182341844}
   _playerTurn: {fileID: 230225695}
   _inputGuide: {fileID: 1349765281}
+  _diceButton: {fileID: 0}
   _playerTurnText: {fileID: 437870096}
   _map: {fileID: 967942413}
   _gameState: 0

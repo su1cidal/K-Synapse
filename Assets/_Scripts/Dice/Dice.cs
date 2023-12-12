@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
@@ -11,6 +12,8 @@ public class Dice : MonoBehaviour
     [SerializeField] private GameObject _number;
     [SerializeField] private TMP_Text _numberText;
     [SerializeField] private GameObject _vfx;
+    [SerializeField] private Button _diceButton;
+    [SerializeField] private GameObject _diceIcon;
     
     [SerializeField] private float speedOfRotation = 100f;
 
@@ -26,14 +29,12 @@ public class Dice : MonoBehaviour
 
     public static event EventHandler OnConfetti;
     public static event EventHandler OnDiceHit;
-    
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsWaitingForInput() && _isPlayer)
         {
-            _isStopPressed = true;
-            
-            _isWaitingForInput = false;
+            RollByPlayer();
         }
 
         if (_dice.activeSelf)
@@ -43,8 +44,19 @@ public class Dice : MonoBehaviour
         }
     }
 
+    private void RollByPlayer()
+    {
+        _isStopPressed = true;
+            
+        _isWaitingForInput = false;
+    }
+    
     public IEnumerator Roll(Pawn pawn)
     {
+        if (pawn.IsPlayer)
+        {
+            _diceIcon.SetActive(true);
+        }
         _isPlayer = pawn.IsPlayer;
         _isStopPressed = false;
         _isEnded = false;
@@ -59,6 +71,7 @@ public class Dice : MonoBehaviour
         }
             
         yield return new WaitUntil(IsStopPressed); // while?
+        _diceIcon.SetActive(false);
         pawn.MakeJump();
         
         pawn.rolledDice = GetANumber();
@@ -112,10 +125,12 @@ public class Dice : MonoBehaviour
     private void OnEnable()
     {
         _dice.SetActive(true);
+        _diceButton.onClick.AddListener(RollByPlayer);
     }
 
     private void OnDisable()
     {
         HideAll();
+        _diceButton.onClick.RemoveListener(RollByPlayer);
     }
 }
