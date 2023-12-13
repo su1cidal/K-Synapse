@@ -8025,6 +8025,7 @@ GameObject:
   - component: {fileID: 437870095}
   - component: {fileID: 437870097}
   - component: {fileID: 437870096}
+  - component: {fileID: 437870098}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8148,6 +8149,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437870094}
   m_CullTransparentMesh: 1
+--- !u!114 &437870098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437870094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2f32a1dd2c24d4da016c6418c175c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _originalScale: {x: 0, y: 0, z: 0}
+  _scaleTo: {x: 0, y: 0, z: 0}
 --- !u!1001 &439985021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22741,7 +22756,6 @@ MonoBehaviour:
   _scoreboardUI: {fileID: 1182341844}
   _playerTurn: {fileID: 230225695}
   _inputGuide: {fileID: 1349765281}
-  _diceButton: {fileID: 0}
   _playerTurnText: {fileID: 437870096}
   _map: {fileID: 967942413}
   _gameState: 0
