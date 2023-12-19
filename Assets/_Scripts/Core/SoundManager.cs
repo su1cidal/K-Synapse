@@ -24,20 +24,12 @@ public class SoundManager : MonoBehaviour
         KeyTile.OnAddKeys += KeyTile_OnAddKeys;
         HealingTile.OnHeal += HealingTile_OnHeal;
         QuestionTile.OnQuizStart += QuestionTile_OnQuizStart;
-        
         Pawn.OnCorrectAnswered += Pawn_OnCorrectAnswered;
         Pawn.OnWrongAnswered += Pawn_OnWrongAnswered;
         //Pawn.OnDiceRoll += Pawn_OnDiceRoll;
         Pawn.OnDeathGlobal += Pawn_OnDeathGlobal;
-        
         Dice.OnConfetti += Dice_OnConfetti;
         Dice.OnDiceHit += Dice_OnDiceHit;
-        // DeliveryManager.Instance.OnRecipeSuccess += DeliveryManager_OnRecipeSuccess;
-        // DeliveryManager.Instance.OnRecipeFailed += DeliveryManager_OnRecipeFailed;
-        // CuttingCounter.OnAnyCut += CuttingCounter_OnAnyCut;
-        // Player.Instance.OnPickedSomething += Player_OnPickedSomething;
-        // BaseCounter.OnAnyObjectPlaced += BaseCounter_OnAnyObjectPlaced;
-        // TrashCounter.OnAnyObjectTrashed += TrashCounter_OnAnyObjectTrashed;
     }
 
     private void QuestionTile_OnQuizStart(object sender, EventArgs e)
